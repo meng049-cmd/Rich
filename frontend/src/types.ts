@@ -82,7 +82,7 @@ export interface TradingSettings {
 
 export interface DashboardState {
   hosting?: {
-    market_transport: 'rest';
+    market_transport: 'snapshot';
     poll_interval_ms: number;
     ledger_status: 'setup' | 'locked' | 'ready' | 'unavailable';
   };

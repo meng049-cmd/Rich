@@ -27,6 +27,7 @@ from sqlalchemy.pool import NullPool
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("arbdesk")
+BITOPRO_PAIRS = ("BTC_TWD", "USDT_TWD", "BTC_USDT")
 
 
 class Settings(BaseSettings):
@@ -218,19 +219,22 @@ class MarketData:
         if source != "rest":
             self.connections[venue].update(connected=True, last_message_ts=now, error=None)
 
-    async def _bitopro_stream(self) -> None:
-        url = "wss://stream.bitopro.com:443/ws/v1/pub/order-books?pairs=BTC_TWD:50,USDT_TWD:50,BTC_USDT:50"
-        async with websockets.connect(url, ping_interval=15, ping_timeout=10, close_timeout=3, max_size=2**22) as ws:
+    async def _bitopro_stream(self, *, snapshot_only: bool = False) -> None:
+        pairs = ",".join(f"{pair}:50" for pair in BITOPRO_PAIRS)
+        url = f"wss://stream.bitopro.com:443/ws/v1/pub/order-books?pairs={pairs}"
+        async with websockets.connect(url, open_timeout=3, ping_interval=15, ping_timeout=10, close_timeout=1, max_size=2**22) as ws:
             async for raw in ws:
                 payload = json.loads(raw)
                 events = payload if isinstance(payload, list) else [payload]
                 for item in events:
-                    if item.get("event") != "ORDER_BOOK":
+                    if item.get("event") != "ORDER_BOOK" or item.get("pair") not in BITOPRO_PAIRS:
                         continue
                     self._set_book(
                         "bitopro", item["pair"], item.get("bids", []), item.get("asks", []),
                         item.get("timestamp"), source="websocket",
                     )
+                if snapshot_only and all(f"bitopro:{pair}" in self.books for pair in BITOPRO_PAIRS):
+                    return
 
     async def _okx_stream(self) -> None:
         url = "wss://ws.okx.com/ws/v5/public"
@@ -263,11 +267,10 @@ class MarketData:
                     self._set_book("okx", pair, b, a, item.get("ts"), seq, source="websocket")
 
     async def _bitopro_rest_recovery(self) -> None:
-        pairs = ("BTC_TWD", "USDT_TWD", "BTC_USDT")
         async with httpx.AsyncClient(timeout=5) as client:
             while True:
                 await asyncio.sleep(10)
-                for pair in pairs:
+                for pair in BITOPRO_PAIRS:
                     current = self.books.get(f"bitopro:{pair}")
                     if current and current.valid and current.age_ms <= active_trading_settings.max_book_age_ms:
                         continue

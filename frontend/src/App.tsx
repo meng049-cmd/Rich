@@ -341,12 +341,13 @@ function App() {
             <div className="feed-separator" />
             {(['bitopro', 'okx'] as Venue[]).map(venue => {
               const status = state.market.connections[venue];
-              const restBooks = Object.values(state.market.books).filter(book => book.venue === venue && book.source === 'rest');
-              const restReady = apiOnline && restBooks.some(book => book.valid && book.age_ms + feedAge <= state.settings.max_book_age_ms);
+              const venueBooks = Object.values(state.market.books).filter(book => book.venue === venue);
+              const freshBook = apiOnline && venueBooks.find(book => book.valid && book.age_ms + feedAge <= state.settings.max_book_age_ms);
+              const snapshotLabel = freshBook && (freshBook.source === 'rest' ? 'REST 快照可用' : 'WebSocket 快照可用');
               const statusLabel = state.market.mode === 'history' ? '歷史模式' : state.market.mode === 'demo' ? '示範來源就緒'
-                : status?.connected && apiOnline ? 'WebSocket 已連線' : restReady ? 'REST 快照可用' : '等待有效行情';
-              const lastSeen = status?.last_message_ts ?? (restBooks.length ? Math.max(...restBooks.map(book => book.received_ts)) : null);
-              return <div className="feed-source" key={venue}><span className={`source-dot ${apiOnline && (status?.connected || restReady) ? 'connected' : ''}`} /><div><strong>{venueLabel(venue)}</strong><span>{statusLabel}</span></div><span className="source-time">{lastSeen ? new Date(lastSeen).toLocaleTimeString('zh-TW', { hour: '2-digit', minute: '2-digit', second: '2-digit' }) : '—'}</span></div>;
+                : status?.connected && apiOnline ? 'WebSocket 已連線' : snapshotLabel || '等待有效行情';
+              const lastSeen = status?.last_message_ts ?? (venueBooks.length ? Math.max(...venueBooks.map(book => book.received_ts)) : null);
+              return <div className="feed-source" key={venue}><span className={`source-dot ${apiOnline && (status?.connected || freshBook) ? 'connected' : ''}`} /><div><strong>{venueLabel(venue)}</strong><span>{statusLabel}</span></div><span className="source-time">{lastSeen ? new Date(lastSeen).toLocaleTimeString('zh-TW', { hour: '2-digit', minute: '2-digit', second: '2-digit' }) : '—'}</span></div>;
             })}
             <div className={`feed-health ${feedWarning ? 'warning' : ''}`}><span className="health-mark">{feedWarning ? '!' : <Check size={12} />}</span><div><strong>{state.market.mode === 'history' ? '歷史帳本模式' : noCurrentMarket ? '等待有效行情' : staleCount > 0 ? `${staleCount} 本行情過期` : '行情狀態正常'}</strong><span>{state.market.mode === 'live' ? '過期或不同步時暫停模擬' : state.market.mode === 'history' ? '不接受新增模擬成交' : '示範價格不可成交'}</span></div></div>
           </section>

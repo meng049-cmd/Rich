@@ -17,13 +17,13 @@ from pydantic import BaseModel, Field
 from sqlalchemy import func, select, text
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker
+from websockets.exceptions import WebSocketException
 
 from . import core as desk
 
 
 logger = logging.getLogger("rich.vercel")
 Mode = Literal["live", "demo", "history"]
-PAIRS = ("BTC_TWD", "USDT_TWD", "BTC_USDT")
 POLL_INTERVAL_MS = 5000
 SESSION_COOKIE = "__Host-rich-ledger"
 SESSION_SECONDS = 12 * 60 * 60
@@ -35,6 +35,7 @@ schema_lock = asyncio.Lock()
 market_lock = asyncio.Lock()
 cached_snapshot: desk.MarketData | None = None
 snapshot_fetched_at = 0.0
+bitopro_retry_after = 0.0
 
 app = FastAPI(title="Rich Market and Paper Ledger", docs_url=None, redoc_url=None, openapi_url=None)
 
@@ -120,33 +121,47 @@ async def sign_out(request: Request, response: Response) -> dict[str, bool]:
     return {"ok": True}
 
 
-async def _load_book(client: httpx.AsyncClient, snapshot: desk.MarketData, venue: str, pair: str) -> None:
+async def _load_bitopro(snapshot: desk.MarketData) -> None:
+    global bitopro_retry_after
+    if time.monotonic() < bitopro_retry_after:
+        snapshot.connections["bitopro"]["error"] = "BitoPro 公開串流暫不可用"
+        return
     try:
-        if venue == "bitopro":
-            response = await client.get(f"https://api.bitopro.com/v3/order-book/{pair.lower()}", params={"limit": 50})
-            response.raise_for_status()
-            data = response.json(parse_float=Decimal)
-            snapshot._set_book(venue, pair, data["bids"], data["asks"], data.get("timestamp"), source="rest")
-        else:
-            response = await client.get("https://www.okx.com/api/v5/market/books", params={"instId": pair, "sz": "50"})
-            response.raise_for_status()
-            payload = response.json(parse_float=Decimal)
-            if payload.get("code") != "0":
-                raise ValueError("OKX rejected the market data query")
-            data = payload["data"][0]
-            bids = [{"price": row[0], "amount": row[1]} for row in data["bids"]]
-            asks = [{"price": row[0], "amount": row[1]} for row in data["asks"]]
-            sequence = data.get("seqId")
-            snapshot._set_book(venue, pair, bids, asks, int(data["ts"]), int(sequence) if sequence is not None else None, source="rest")
-        book = snapshot.books[f"{venue}:{pair}"]
+        async with asyncio.timeout(3.5):
+            await snapshot._bitopro_stream(snapshot_only=True)
+    except (TimeoutError, OSError, WebSocketException, ArithmeticError, KeyError, TypeError, ValueError) as exc:
+        response = getattr(exc, "response", None)
+        status = getattr(response, "status_code", None) or type(exc).__name__
+        logger.info("BitoPro stream did not return all books (%s)", status)
+        snapshot.connections["bitopro"]["error"] = "BitoPro 部分或全部委託簿暫不可用"
+        if not any(book.venue == "bitopro" for book in snapshot.books.values()):
+            bitopro_retry_after = time.monotonic() + 30
+    finally:
+        snapshot.connections["bitopro"]["connected"] = False
+
+
+async def _load_okx(client: httpx.AsyncClient, snapshot: desk.MarketData) -> None:
+    pair = "BTC-USDT"
+    try:
+        response = await client.get("https://www.okx.com/api/v5/market/books", params={"instId": pair, "sz": "50"})
+        response.raise_for_status()
+        payload = response.json(parse_float=Decimal)
+        if payload.get("code") != "0":
+            raise ValueError("OKX rejected the market data query")
+        data = payload["data"][0]
+        bids = [{"price": row[0], "amount": row[1]} for row in data["bids"]]
+        asks = [{"price": row[0], "amount": row[1]} for row in data["asks"]]
+        sequence = data.get("seqId")
+        snapshot._set_book("okx", pair, bids, asks, int(data["ts"]), int(sequence) if sequence is not None else None, source="rest")
+        book = snapshot.books[f"okx:{pair}"]
         if book.valid:
-            snapshot.connections[venue]["last_message_ts"] = book.received_ts
+            snapshot.connections["okx"].update(last_message_ts=book.received_ts, error=None)
         else:
-            snapshot.connections[venue]["error"] = f"{pair} 委託簿無效"
+            snapshot.connections["okx"]["error"] = f"{pair} 委託簿無效"
     except (httpx.HTTPError, ArithmeticError, KeyError, IndexError, TypeError, ValueError) as exc:
         status = exc.response.status_code if isinstance(exc, httpx.HTTPStatusError) else type(exc).__name__
-        logger.info("%s %s market data unavailable (%s)", venue, pair, status)
-        snapshot.connections[venue]["error"] = f"{pair} 公開委託簿暫不可用"
+        logger.info("OKX %s market data unavailable (%s)", pair, status)
+        snapshot.connections["okx"]["error"] = f"{pair} 公開委託簿暫不可用"
 
 
 async def _snapshot(mode: Mode, *, fresh: bool = False) -> desk.MarketData:
@@ -165,10 +180,10 @@ async def _snapshot(mode: Mode, *, fresh: bool = False) -> desk.MarketData:
                 return cached_snapshot
         market = desk.MarketData("live")
         async with httpx.AsyncClient(timeout=httpx.Timeout(3, connect=2)) as client:
-            await asyncio.gather(
-                *(_load_book(client, market, "bitopro", pair) for pair in PAIRS),
-                _load_book(client, market, "okx", "BTC-USDT"),
-            )
+            await asyncio.gather(_load_bitopro(market), _load_okx(client, market))
+            bito, okx = market.books.get("bitopro:BTC_USDT"), market.books.get("okx:BTC-USDT")
+            if bito and okx and bito.observed_ts - okx.observed_ts > desk.settings.max_cross_skew_ms:
+                await _load_okx(client, market)
         cached_snapshot = market
         snapshot_fetched_at = time.monotonic()
         return market
@@ -176,13 +191,13 @@ async def _snapshot(mode: Mode, *, fresh: bool = False) -> desk.MarketData:
 
 def _with_host_status(state: dict[str, Any], ledger_status: str) -> dict[str, Any]:
     return state | {
-        "hosting": {"market_transport": "rest", "poll_interval_ms": POLL_INTERVAL_MS, "ledger_status": ledger_status},
+        "hosting": {"market_transport": "snapshot", "poll_interval_ms": POLL_INTERVAL_MS, "ledger_status": ledger_status},
     }
 
 
 @app.get("/api/health")
 async def health() -> dict[str, Any]:
-    return {"ok": True, "mode": "live", "market_transport": "rest", "database_configured": db is not None}
+    return {"ok": True, "mode": "live", "market_transport": "snapshot", "database_configured": db is not None}
 
 
 @app.get("/api/state")
