@@ -1,7 +1,293 @@
-YªçŠx-®éÜj×¢ëiºÚ+Š§j[h‘éÜ¢éí×}tÙ:-jZ.¶›­–)Ş³V–×÷'B²W6T6ÆÆ&6²ÂW6TVffV7BÂW6TÖVÖòÂW6U7FFRÒg&öÒw&V7Bs°¦–×÷'B°¢7F—f—G’Â'&÷tF÷våWÂ'&÷tÆVgE&–v‡BÂ&VÆÂÂ&öö´÷VâÂ6†V6²Â6†Wg&öäF÷vâÀ¢6—&6ÆT†VÇÂ6Æö6³2ÂvVvRÂ†—7F÷'’ÂÆ–÷WDF6†&ö&BÂÖVçRÀ¢Æ’Â&Vg&W6„7rÂ6WGF–æw3"Â6†–VÆD6†V6²Â6Æ–FW'4†÷&—¦öçFÂÀ¢vÆÆWD6&G2Â‚À§Òg&öÒvÇV6–FR×&V7Bs°¦–×÷'B²FVÖõ7FFRÒg&öÒrâöFVÖòs°¦–×÷'BG—R²ÖöFRÂF6†&ö&E7FFRÂ÷÷'GVæ—G’Â÷&FW$&öö²ÂG&F–æu6WGF–æw2ÂG&FRÂ6–væÂÂfVçVRÒg&öÒrâ÷G—W2s° §G—Rf–WrÒv÷fW'f–WrrÂw6–væÇ2rÂvÆVFvW"rÂvFWF‚s°¦6öç7B”&6RÒ–×÷'BæÖWFæVçbåd•DUô•ô$4Róòrs°¦6öç7BÖöFTÆ&VÃ¢&V6÷&CÄÖöFRÂ7G&–æsâÒ²FVÖó¢~zK®zøBrÂÆ—fS¢~XÛ>i˜"rÂ†—7F÷'“¢~jÛ~Xû"rÓ° ¦gVæ7F–öâÖöæW’‡fÇVS¢çVÖ&W"Â7G&–ærÂFV6–ÖÇ2Ò"’°¢6öç7BâÒçVÖ&W"‡fÇVR“°¢–b‚çVÖ&W"æ—4f–æ—FR†â’’&WGW&â~(	Bs°¢&WGW&âæWr–çFÂäçVÖ&W$f÷&ÖB‚w¦‚ÕErrÂ²Ö–æ–×VÔg&7F–öäF–v—G3¢FV6–ÖÇ2ÂÖ†–×VÔg&7F–öäF–v—G3¢FV6–ÖÇ2Ò’æf÷&ÖB†â“°§Ğ ¦gVæ7F–öâfVçVTÆ&VÂ‡fVçVS¢fVçVR’²&WGW&âfVçVRÓÓÒv&—F÷&òròt&—Fõ&òr¢tôµ‚s²Ğ¦gVæ7F–öâæÄ6Æ72‡fÇVS¢7G&–ærÂçVÖ&W"’²&WGW&âçVÖ&W"‡fÇVR’ãÒòw÷6—F—fRr¢væVvF—fRs²Ğ ¦gVæ7F–öâvWD&öö²‡7FFS¢F6†&ö&E7FFRÂ–Có¢7G&–ær“¢÷&FW$&öö²ÂVæFVf–æVB°¢&WGW&â–Bò7FFRæÖ&¶WBæ&öö·5¶–EÒ¢VæFVf–æVC°§Ğ ¦gVæ7F–öâ‚’°¢6öç7B·7FFRÂ6WE7FFUÒÒW6U7FFSÄF6†&ö&E7FFSâ†FVÖõ7FFR“°¢6öç7B¶”öæÆ–æRÂ6WD”öæÆ–æUÒÒW6U7FFR†fÇ6R“°¢6öç7B·f–WrÂ6WEf–WuÒÒW6U7FFSÅf–Wsâ‚v÷fW'f–Wrr“°¢6öç7B·6WGF–æw4÷VâÂ6WE6WGF–æw4÷VåÒÒW6U7FFR†fÇ6R“°¢6öç7B¶&Ææ6W4÷VâÂ6WD&Ææ6W4÷VåÒÒW6U7FFR†fÇ6R“°¢6öç7B¶Öö&–ÆTæd÷VâÂ6WDÖö&–ÆTæd÷VåÒÒW6U7FFR†fÇ6R“°¢6öç7B·Fö7BÂ6WEFö7EÒÒW6U7FFR‚rr“°¢6öç7B¶'W7•G&FRÂ6WD'W7•G&FUÒÒW6U7FFSÇ7G&–ærÂçVÆÃâ†çVÆÂ“°¢6öç7B·6—¦RÂ6WE6—¦UÒÒW6U7FFSÅ&V6÷&CÇ7G&–ærÂ7G&–æsãâ‡·Ò“°¢6öç7B¶f÷&Õ6WGF–æw2Â6WDf÷&Õ6WGF–æw5ÒÒW6U7FFSÅG&F–æu6WGF–æw3â†FVÖõ7FFRç6WGF–æw2“°¢6öç7B·6f–æu6WGF–æw2Â6WE6f–æu6WGF–æw5ÒÒW6U7FFR†fÇ6R“°¢6öç7B¶&Ææ6TG&gBÂ6WD&Ææ6TG&gEÒÒW6U7FFSÅ&V6÷&CÇ7G&–ærÂ7G&–æsãâ‡·Ò“°¢6öç7B·6f–æt&Ææ6W2Â6WE6f–æt&Ææ6W5ÒÒW6U7FFR†fÇ6R“° ¢6öç7B&V6V—fU7FFRÒW6T6ÆÆ&6²‚†–æ6öÖ–æs¢F6†&ö&E7FFR’Óâ°¢6WE7FFR†–æ6öÖ–ær“°¢6WD”öæÆ–æR‡G'VR“°¢ÒÂµÒ“° ¢gVæ7F–öâ÷Vå6WGF–æw2‚’°¢6WDf÷&Õ6WGF–æw2‡7FFRç6WGF–æw2“°¢6WE6WGF–æw4÷Vâ‡G'VR“°¢Ğ ¢gVæ7F–öâ÷Vä&Ææ6TVF—F÷"‚’°¢6WD&Ææ6TG&gB„ö&¦V7Bæg&öÔVçG&–W2‡7FFRæ&Ææ6W2æÖ†—FVÒÓâ¶G¶—FVÒçfVçVWÓ¢G¶—FVÒæ76WGÖÂ—FVÒæÖ÷VçEÒ’’“°¢6WD&Ææ6W4÷Vâ‡G'VR“°¢Ğ ¢W6TVffV7B‚‚’Óâ°¢ÆWBF—7÷6VBÒfÇ6S°¢ÆWB6ö6¶WC¢vV%6ö6¶WBÂçVÆÂÒçVÆÃ°¢ÆWB&WG'“¢çVÖ&W"ÂVæFVf–æVC°¢6öç7BÆöBÒ7–æ2‚’Óâ°¢G'’°¢6öç7B&W7öç6RÒv—BfWF6‚†G¶”&6WÒö’÷7FFVÂ²66†S¢væò×7F÷&RrÒ“°¢–b‚&W7öç6Ræö²’F‡&÷ræWrW'&÷"‚v’öffÆ–æRr“°¢&V6V—fU7FFR†v—B&W7öç6Ræ§6öâ‚’2F6†&ö&E7FFR“°¢Ò6F6‚°¢–b‚F—7÷6VB’6WD”öæÆ–æR†fÇ6R“°¢Ğ¢Ó°¢6öç7B÷Vå6ö6¶WBÒ‚’Óâ°¢6öç7B&÷Fö6öÂÒv–æF÷ræÆö6F–öâç&÷Fö6öÂÓÓÒv‡GG3¢ròww73¢r¢ww3¢s°¢6öç7B†÷7BÒ”&6RòæWrU$Â†”&6R’æ†÷7B¢v–æF÷ræÆö6F–öâæ†÷7C°¢6ö6¶WBÒæWrvV%6ö6¶WB†G·&÷Fö6öÇÒòòG¶†÷7GÒ÷w6“°¢6ö6¶WBæöæÖW76vRÒWfVçBÓâ°¢G'’²&V6V—fU7FFR„¥4ôâç'6R†WfVçBæFF’2F6†&ö&E7FFR“²Ò6F6‚²ò¢–væ÷&RÖÆf÷&ÖVBfVVBg&ÖR¢òĞ¢Ó°¢6ö6¶WBæöæ6Æ÷6RÒ‚’Óâ²–b‚F—7÷6VB’&WG'’Òv–æF÷rç6WEF–ÖV÷WB†÷Vå6ö6¶WBÂ3“²Ó°¢6ö6¶WBæöæW'&÷"Ò‚’Óâ6ö6¶WCòæ6Æ÷6R‚“°¢Ó°¢fö–BÆöB‚“°¢÷Vå6ö6¶WB‚“°¢6öç7BöÆÂÒv–æF÷rç6WD–çFW'fÂ†ÆöBÂs“°¢&WGW&â‚’Óâ°¢F—7÷6VBÒG'VS°¢v–æF÷ræ6ÆV$–çFW'fÂ‡öÆÂ“°¢–b‡&WG'’’v–æF÷ræ6ÆV%F–ÖV÷WB‡&WG'’“°¢6ö6¶WCòæ6Æ÷6R‚“°¢Ó°¢ÒÂ·&V6V—fU7FFUÒ“° ¢W6TVffV7B‚‚’Óâ°¢–b‚Fö7B’&WGW&ã°¢6öç7BF–ÖV÷WBÒv–æF÷rç6WEF–ÖV÷WB‚‚’Óâ6WEFö7B‚rr’Â3#“°¢&WGW&â‚’Óâv–æF÷ræ6ÆV%F–ÖV÷WB‡F–ÖV÷WB“°¢ÒÂ·Fö7EÒ“° ¢6öç7BÆFW7E&–6RÒW6TÖVÖò‚‚’Óâ°¢6öç7B&öö²ÒvWD&öö²‡7FFRÂvö·ƒ¤%D2ÕU4EBr“°¢–b‚&öö³òæ&–G5³ÒÇÂ&öö³òæ6·5³Ò’&WGW&âçVÆÃ°¢&WGW&â„çVÖ&W"†&öö²æ&–G5³Òç&–6R’²çVÖ&W"†&öö²æ6·5³Òç&–6R’’ò#°¢ÒÂ·7FFUÒ“° ¢6öç7B7FÆT6÷VçBÒW6TÖVÖò‚‚’Óâö&¦V7BçfÇVW2‡7FFRæÖ&¶WBæ&öö·2’æf–ÇFW"†&öö²Óâ&öö²çfÆ–BÇÂ&öö²ævUö×2â7FFRç6WGF–æw2æÖ…ö&ööµövUö×2’æÆVæwF‚Â·7FFUÒ“°¢6öç7Bæô7W'&VçDÖ&¶WBÒ7FFRæÖ&¶WBæÖöFRÓÓÒv†—7F÷'’rÇÂö&¦V7Bæ¶W—2‡7FFRæÖ&¶WBæ&öö·2’æÆVæwF‚ÓÓÒ°¢6öç7BfVVEv&æ–ærÒæô7W'&VçDÖ&¶WBÇÂ7FÆT6÷VçBâ°¢6öç7BF÷FÅG&FW2Ò7FFRç7VÖÖ'“òçG&FUö6÷VçBóò7FFRçG&FW2æÆVæwFƒ°¢6öç7B&VÆ—¦VEæÄ'”76WBÒ7FFRç7VÖÖ'“òç&VÆ—¦VE÷æÅö'•ö76WBóò·Ó°¢6öç7BæÄVçG&–W2Òö&¦V7BæVçG&–W2‡&VÆ—¦VEæÄ'”76WB“°¢6öç7B&–Ö'•æÄVçG'’ÒæÄVçG&–W2æf–æB‚…¶76WEÒ’Óâ76WBÓÓÒuU4EBr’óòæÄVçG&–W5³Ó°¢6öç7B&VÆ—¦VEæÂÒçVÖ&W"‡&–Ö'•æÄVçG'“òå³Òóò“°¢6öç7B÷F†W%æÄ76WG2ÒæÄVçG&–W2æf–ÇFW"‚…¶76WEÒ’Óâ76WBÓÒ&–Ö'•æÄVçG'“òå³Ò’æÖ‚…¶76WBÂÖ÷VçEÒ’ÓâG¶76WGÒG¶ÖöæW’†Ö÷VçBÂ"—Ö’æ¦ö–â‚r+rr“° ¢7–æ2gVæ7F–öâ6†ævTÖöFR†ÖöFS¢ÖöFR’°¢–b‚”öæÆ–æR’°¢6WEFö7B‚~Š¸¾XXYYşX¹^iÊÎj™şiÈŞX¹ûÈÎXhŞXˆ~hù¾‹8~iijŠ[Èòr“°¢&WGW&ã°¢Ğ¢G'’°¢6öç7B&W7öç6RÒv—BfWF6‚†G¶”&6WÒö’öÖöFVÂ²ÖWF†öC¢uUBrÂ†VFW'3¢²t6öçFVçBÕG—Rs¢vÆ–6F–öâö§6öârÒÂ&öG“¢¥4ôâç7G&–æv–g’‡²ÖöFRÒ’Ò“°¢–b‚&W7öç6Ræö²’F‡&÷ræWrW'&÷"‚vÖöFR6†ævRf–ÆVBr“°¢6öç7BæW‡BÒv—B†v—BfWF6‚†G¶”&6WÒö’÷7FFVÂ²66†S¢væò×7F÷&RrÒ’’æ§6öâ‚’2F6†&ö&E7FFS°¢&V6V—fU7FFR†æW‡B“°¢6WEFö7B†[{.Xˆ~hù¾ˆ{2G¶ÖöFTÆ&VÅ¶ÖöFU×Ş‹8~iijŠ[Èö“°¢Ò6F6‚²6WEFö7B‚~‹8~iijŠ[ÈşXˆ~hù¾ZKiY~ûÈÎŠ¸¾z+®Š¨Ş[èÎzºşiÈŞX¹x¸hX²r“²Ğ¢Ğ ¢7–æ2gVæ7F–öâ6–×VÆFR†—FVÓ¢÷÷'GVæ—G’’°¢–b‚”öæÆ–æR’²6WEFö7B‚~jŠi:ÎiÈŞX¹[	®iÊ®˜
->{y®ûÈÎŠ¸¾XXYYşX¹^[j‚r“²&WGW&ã²Ğ¢6öç7BFVfVÇE6—¦RÒ—FVÒæ¶–æBÓÓÒv7&÷72ròsãr¢ss°¢6öç7BÖ÷VçBÒ6—¦U¶—FVÒæ–EÒÇÂFVfVÇE6—¦S°¢6WD'W7•G&FR†—FVÒæ–B“°¢G'’°¢6öç7B&W7öç6RÒv—BfWF6‚†G¶”&6WÒö’÷6–×VÆF–öç6Â°¢ÖWF†öC¢uõ5BrÂ†VFW'3¢²t6öçFVçBÕG—Rs¢vÆ–6F–öâö§6öârÒÀ¢&öG“¢¥4ôâç7G&–æv–g’‡²7G&FVw•ö–C¢—FVÒæ–BÂ6—¦S¢Ö÷VçBÒ’À¢Ò“°¢6öç7B&W7VÇBÒv—B&W7öç6Ræ§6öâ‚“°¢–b‚&W7öç6Ræö²’F‡&÷ræWrW'&÷"‡&W7VÇBæFWF–ÂÇÂ~jŠi:Îh‰KªNZKiYrr“°¢6öç7B&Vg&W6†VBÒv—B†v—BfWF6‚†G¶”&6WÒö’÷7FFVÂ²66†S¢væò×7F÷&RrÒ’’æ§6öâ‚’2F6†&ö&E7FFS°¢&V6V—fU7FFR‡&Vg&W6†VB“°¢6WEFö7B†jŠi:ÎZèÎh‰ûÉ¢G¶ÖöæW’‡&W7VÇBçæÂÂB—ÒG·&W7VÇBæVæEö76WGÖ“°¢Ò6F6‚†W'&÷"’°¢6WEFö7B†W'&÷"–ç7Fæ6VöbW'&÷"òW'&÷"æÖW76vR¢~jŠi:Îh‰KªNZKiYrr“°¢Òf–æÆÇ’²6WD'W7•G&FR†çVÆÂ“²Ğ¢Ğ ¢7–æ2gVæ7F–öâ6fU6WGF–æw2‚’°¢–b‚”öæÆ–æR’²6WEFö7B‚~Š¸¾XXYYşX¹^iÊÎj™şiÈŞX¹ûÈÎXhŞXK.ZÙŠŠŞZé¢r“²&WGW&ã²Ğ¢6WE6f–æu6WGF–æw2‡G'VR“°¢G'’°¢6öç7B&W7öç6RÒv—BfWF6‚†G¶”&6WÒö’÷6WGF–æw6Â²ÖWF†öC¢uUBrÂ†VFW'3¢²t6öçFVçBÕG—Rs¢vÆ–6F–öâö§6öârÒÂ&öG“¢¥4ôâç7G&–æv–g’†f÷&Õ6WGF–æw2’Ò“°¢–b‚&W7öç6Ræö²’F‡&÷ræWrW'&÷"‚~ŠŠŞZé®XK.ZÙZKiYrr“°¢6öç7B&Vg&W6†VBÒv—B†v—BfWF6‚†G¶”&6WÒö’÷7FFVÂ²66†S¢væò×7F÷&RrÒ’’æ§6öâ‚’2F6†&ö&E7FFS°¢&V6V—fU7FFR‡&Vg&W6†VB“°¢6WE6WGF–æw4÷Vâ†fÇ6R“°¢6WEFö7B‚~yº>hê~ˆˆ~jŠi:Îj)ŞK»n[{.XK.ZÙ‚r“°¢Ò6F6‚†W'&÷"’²6WEFö7B†W'&÷"–ç7Fæ6VöbW'&÷"òW'&÷"æÖW76vR¢~ŠŠŞZé®XK.ZÙZKiYrr“²Ğ¢f–æÆÇ’²6WE6f–æu6WGF–æw2†fÇ6R“²Ğ¢Ğ ¢7–æ2gVæ7F–öâ6fT&Ææ6W2‚’°¢–b‚”öæÆ–æR’²6WEFö7B‚~Š¸¾XXYYşX¹^iÊÎj™şiÈŞX¹ûÈÎXhŞŠ«şi[N‰™¾i:Î‹8~yJ"r“²&WGW&ã²Ğ¢6WE6f–æt&Ææ6W2‡G'VR“°¢G'’°¢6öç7B&Ææ6W2Òö&¦V7BæVçG&–W2†&Ææ6TG&gB’æÖ‚…¶¶W’ÂÖ÷VçEÒ’Óâ°¢6öç7B·fVçVRÂ76WEÒÒ¶W’ç7Æ—B‚s¢r“°¢&WGW&â²fVçVRÂ76WBÂÖ÷VçBÓ°¢Ò“°¢6öç7B&W7öç6RÒv—BfWF6‚†G¶”&6WÒö’ö&Ææ6W6Â²ÖWF†öC¢uUBrÂ†VFW'3¢²t6öçFVçBÕG—Rs¢vÆ–6F–öâö§6öârÒÂ&öG“¢¥4ôâç7G&–æv–g’‡²&Ææ6W2Ò’Ò“°¢6öç7B&W7VÇBÒv—B&W7öç6Ræ§6öâ‚“°¢–b‚&W7öç6Ræö²’F‡&÷ræWrW'&÷"‡&W7VÇBæFWF–ÂÇÂ~‰™¾i:Î‹8~yJ.XK.ZÙZKiYrr“°¢6öç7B&Vg&W6†VBÒv—B†v—BfWF6‚†G¶”&6WÒö’÷7FFVÂ²66†S¢væò×7F÷&RrÒ’’æ§6öâ‚’2F6†&ö&E7FFS°¢&V6V—fU7FFR‡&Vg&W6†VB“°¢6WD&Ææ6W4÷Vâ†fÇ6R“°¢6WEFö7B‚~‰™¾i:Î‹8~yJ.[{.i»NikûÉ¾iz.iÈ[‹>iÊÎ{H˜ÈNKùŞyY’r“°¢Ò6F6‚†W'&÷"’²6WEFö7B†W'&÷"–ç7Fæ6VöbW'&÷"òW'&÷"æÖW76vR¢~‰™¾i:Î‹8~yJ.XK.ZÙZKiYrr“²Ğ¢f–æÆÇ’²6WE6f–æt&Ææ6W2†fÇ6R“²Ğ¢Ğ ¢6öç7BæbÒ°¢²–C¢v÷fW'f–Wrr2f–WrÂÆ&VÃ¢~{‹ŞŠkÒrÂ–6öã¢Æ–÷WDF6†&ö&BÒÀ¢²–C¢w6–væÇ2r2f–WrÂÆ&VÃ¢~ZY~XŠŠˆ®‰™òrÂ–6öã¢7F—f—G’Â6÷VçC¢7FFRæ÷÷'GVæ—F–W2æÆVæwF‚ÒÀ¢²–C¢vÆVFvW"r2f–WrÂÆ&VÃ¢~jŠi:Î[‹>iÊÂrÂ–6öã¢†—7F÷'’Â6÷VçC¢F÷FÅG&FW2ÇÂVæFVf–æVBÒÀ¢²–C¢vFWF‚r2f–WrÂÆ&VÃ¢~ZyNŠ‰~{şk{[ªbrÂ–6öã¢&öö´÷VâÒÀ¢Ó° ¢&WGW&â€¢ÆF—b6Æ74æÖSÒ&×6†VÆÂ#à¢Æ6–FR6Æ74æÖS×¶6–FV&"G¶Öö&–ÆTæd÷VâòvÖö&–ÆRÖ÷Vâr¢rwÖÓà¢ÆF—b6Æ74æÖSÒ&'&æBÖÆö6·W#à¢ÆF—b6Æ74æÖSÒ&'&æBÖÖ&²#ãÄ'&÷tÆVgE&–v‡B6—¦S×³—ÒóãÂöF—cà¢ÆF—cãÇ7G&öæsä$$•E$tSÂ÷7G&öæsãÇ7ãäDU4²+rU#Â÷7ããÂöF—cà¢Æ'WGFöâ6Æ74æÖSÒ&–6öâÖ'WGFöâ6Æ÷6RÖÖö&–ÆR"&–ÖÆ&VÃÒ.™yÎ™h˜Yjâ"öä6Æ–6³×²‚’Óâ6WDÖö&–ÆTæd÷Vâ†fÇ6R—ÓãÅ‚6—¦S×³‡ÒóãÂö'WGFöãà¢ÂöF—cà¢ÆF—b6Æ74æÖSÒ'v÷&·76R×7v—F6†W"#à¢ÆF—b6Æ74æÖSÒ'v÷&·76RÖfF"#äCÂöF—cà¢ÆF—cãÇ7G&öæsîX¾K«®jŠi:Î[z^KÙÎXûÂ÷7G&öæsãÇ7ãîYjîK«®‰™¾i:Î[‹>h‹cÂ÷7ããÂöF—cà¢Ä6†Wg&öäF÷vâ6—¦S×³WÒ6Æ74æÖSÒ&×WFVBÖ–6öâ"óà¢ÂöF—cà¢ÆF—b6Æ74æÖSÒ&æbÖ6F–öâ#î[z^KÙÎXØÂöF—cà¢Ææb6Æ74æÖSÒ&Ö–âÖæb"&–ÖÆ&VÃÒ.K‹¾˜Yjâ#à¢¶æbæÖ†—FVÒÓâÆ'WGFöâ¶W“×¶—FVÒæ–GÒ6Æ74æÖS×¶æbÖ—FVÒG·f–WrÓÓÒ—FVÒæ–Bòv7F—fRr¢rwÖÒöä6Æ–6³×²‚’Óâ²6WEf–Wr†—FVÒæ–B“²6WDÖö&–ÆTæd÷Vâ†fÇ6R“²×Óà¢Æ—FVÒæ–6öâ6—¦S×³wÒ7G&ö¶Uv–GFƒ×³ã‡ÒóãÇ7ãç¶—FVÒæÆ&VÇÓÂ÷7ãç¶—FVÒæ6÷VçBòÇ6ÖÆÃç¶—FVÒæ6÷VçGÓÂ÷6ÖÆÃâ¢çVÆÇĞ¢Âö'WGFöãâ—Ğ¢Âöæcà¢ÆF—b6Æ74æÖSÒ&æbÖ6F–öâÖ&¶WBÖ6F–öâ#îyº>hê~[ˆ.ZCÂöF—cà¢ÆF—b6Æ74æÖSÒ&Ö&¶WBÖæbÖ—FVÒ#ãÇ7â6Æ74æÖSÒ&6ö–âÖ–6öâ'F2#î(+óÂ÷7ããÇ7ãä%D2òU4ECÂ÷7ããÇ7â6Æ74æÖSÒ&Ö&¶WBÖÆ—fRÖF÷B"óãÂöF—cà¢ÆF—b6Æ74æÖSÒ&Ö&¶WBÖæbÖ—FVÒ#ãÇ7â6Æ74æÖSÒ&6ö–âÖ–6öâGvB#âCÂ÷7ããÇ7ãä%D2òEtCÂ÷7ããÇ7â6Æ74æÖSÒ&Ö&¶WBÖÆ—fRÖF÷B"óãÂöF—cà¢ÆF—b6Æ74æÖSÒ'6–FV&"Ö&÷GFöÒ#à¢ÆF—b6Æ74æÖSÒ'6fRÖ&÷‚#ãÅ6†–VÆD6†V6²6—¦S×³wÒóãÆF—cãÇ7G&öæsîX8^™™jŠi:ÎKªNi‰3Â÷7G&öæsãÇ7ãîKˆŞiÈ>˜X{®yÉşZúnŠˆ.YjãÂ÷7ããÂöF—cãÂöF—cà¢Æ'WGFöâ6Æ74æÖSÒ&æbÖ—FVÒ"öä6Æ–6³×¶÷Vå6WGF–æw7ÓãÅ6WGF–æw3"6—¦S×³wÒóãÇ7ãîŠŠŞZé£Â÷7ããÂö'WGFöãà¢ÆF—b6Æ74æÖSÒ'&öf–ÆR×&÷r#ãÆF—b6Æ74æÖSÒ'&öf–ÆRÖfF"#äÃÂöF—cãÆF—cãÇ7G&öæsîiÊÎj™şi8ŞKÙÎˆSÂ÷7G&öæsãÇ7ãî‹8~iiKùŞZÙYÊiÊÎj™ş‹8~ii[ª³Â÷7ããÂöF—cãÄ6—&6ÆT†VÇ6—¦S×³gÒ6Æ74æÖSÒ&×WFVBÖ–6öâ"óãÂöF—cà¢ÂöF—cà¢Âö6–FSà ¢¶Öö&–ÆTæd÷VâbbÆ'WGFöâ6Æ74æÖSÒ&Öö&–ÆR×67&–Ò"&–ÖÆ&VÃÒ.™yÎ™h[îŠkÒ"öä6Æ–6³×²‚’Óâ6WDÖö&–ÆTæd÷Vâ†fÇ6R—ÒóçĞ ¢ÆÖ–â6Æ74æÖSÒ&Ö–âÖ6öçFVçB#à¢Æ†VFW"6Æ74æÖSÒ'F÷&"#à¢ÆF—b6Æ74æÖSÒ'F÷&"ÖÆVgB#à¢Æ'WGFöâ6Æ74æÖSÒ&–6öâÖ'WGFöâÖVçR×FövvÆR"&–ÖÆ&VÃÒ.™h¾YYş˜Yjâ"öä6Æ–6³×²‚’Óâ6WDÖö&–ÆTæd÷Vâ‡G'VR—ÓãÄÖVçR6—¦S×³—ÒóãÂö'WGFöãà¢ÆF—b6Æ74æÖSÒ&'&VF7'VÖ'2#ãÇ7ãîyº>hê~[z^KÙÎXØÂ÷7ããÇ7â6Æ74æÖSÒ&7'VÖ"×6Æ6‚#âóÂ÷7ããÇ7G&öæsç¶æbæf–æB†—FVÒÓâ—FVÒæ–BÓÓÒf–Wr“òæÆ&VÇÓÂ÷7G&öæsãÂöF—cà¢ÂöF—cà¢ÆF—b6Æ74æÖSÒ'F÷&"×&–v‡B#à¢ÆF—b6Æ74æÖSÒ&ÖöFR×6VÆV7B×w&#ãÇ7â6Æ74æÖS×¶ÖöFRÖF÷BG·7FFRæÖ&¶WBæÖöFWÖÒóà¢Ç6VÆV7B&–ÖÆ&VÃÒ.‹8~iijŠ[Èò"fÇVS×·7FFRæÖ&¶WBæÖöFWÒöä6†ævS×¶WfVçBÓâfö–B6†ævTÖöFR†WfVçBçF&vWBçfÇVR2ÖöFR—Óà¢Æ÷F–öâfÇVSÒ&FVÖò#îzK®zøN‹8~ii“Âö÷F–öããÆ÷F–öâfÇVSÒ&Æ—fR#îXÛ>i˜.ŠÎh8SÂö÷F–öããÆ÷F–öâfÇVSÒ&†—7F÷'’#îjÛ~Xû.[‹>iÊÃÂö÷F–öãà¢Â÷6VÆV7CãÄ6†Wg&öäF÷vâ6—¦S×³7Ò6Æ74æÖSÒ'6VÆV7BÖ6&WB"óà¢ÂöF—cà¢ÆF—b6Æ74æÖS×¶’×7FGW2G¶”öæÆ–æRòvöæÆ–æRr¢vöffÆ–æRwÖÓãÇ7âóç¶”öæÆ–æRò~[èÎzºş[{.˜
->{y¢r¢~X˜ŞzºşzK®zøNyZ¾™Ú"wÓÂöF—cà¢Æ'WGFöâ6Æ74æÖSÒ&–6öâÖ'WGFöâ&VÆÂÖ'WGFöâ"&–ÖÆ&VÃÒ.˜	®yúR#ãÄ&VÆÂ6—¦S×³wÒóãÆ’óãÂö'WGFöãà¢Æ'WGFöâ6Æ74æÖSÒ&–6öâÖ'WGFöâ6WGF–æw2×6†÷'F7WB"&–ÖÆ&VÃÒ.ŠŠŞZé¢"öä6Æ–6³×¶÷Vå6WGF–æw7ÓãÅ6Æ–FW'4†÷&—¦öçFÂ6—¦S×³wÒóãÂö'WGFöãà¢ÂöF—cà¢Âö†VFW#à ¢ÆF—b6Æ74æÖSÒ'vR×w&#à¢Ç6V7F–öâ6Æ74æÖSÒ'vRÖ†VF–ær#à¢ÆF—cà¢ÆF—b6Æ74æÖSÒ&W–V'&÷r#ãÇ7â6Æ74æÖSÒ&W–V'&÷rÖÆ–æR"óâÔ$´UBÔôä•Dõ"Ç7â6Æ74æÖSÒ&W–V'&÷rÖFFR#ç¶æWr–çFÂäFFUF–ÖTf÷&ÖB‚w¦‚ÕErrÂ²FFU7G–ÆS¢vÖVF—VÒrÒ’æf÷&ÖB†æWrFFR‚’—ÓÂ÷7ããÂöF—cà¢Æƒç·f–WrÓÓÒv÷fW'f–Wrrò~ZY~XŠyº>hê~{‹ŞŠkÒr¢æbæf–æB†—FVÒÓâ—FVÒæ–BÓÓÒf–Wr“òæÆ&VÇÓÂöƒà¢Çç·f–WrÓÓÒv÷fW'f–Wrrò~‹ûŞ‹šN‹zh˜X;[zî8KˆŠy.‹zş[éˆˆ~jŠi:Î[‹>h‹nx¸hX¾8"r¢f–WrÓÓÒvÆVFvW"rò~jª.ŠinjøşjÊjŠi:Îy¨Nh‰KªNjÚ^š™ş8‹+¾yJX~ŠŠŞˆˆ~šIšŞŠè®XÉn8"r¢f–WrÓÓÒvFWF‚rò~KÛşyJXúşŠh¾ZyNŠ‰~{şKËzé~h‰KªN˜xş8etˆˆ~k¹X;8"r¢~Kº^hš>™šNX~ŠŠŞ‹+¾xè~[èÎy¨NX;[zîhé.[¨şûÈÎk{[ªnKˆŞ‹k>i˜.KˆŞ[»®z¸¾jŠi:Îh‰KªN8"wÓÂ÷à¢ÂöF—cà¢ÆF—b6Æ74æÖSÒ&†VF–ærÖ7F–öç2#à¢ÆF—b6Æ74æÖSÒ&Æ7B×WFFVB#ãÇ7â6Æ74æÖSÒ'7FGW2×VÇ6R"óîi»NikikÂ¶æWrFFR‡7FFRæÖ&¶WBævVæW&FVEöB’çFôÆö6ÆUF–ÖU7G&–ær‚w¦‚ÕErrÂ²†÷W#¢s"ÖF–v—BrÂÖ–çWFS¢s"ÖF–v—BrÂ6V6öæC¢s"ÖF–v—BrÒ—ÓÂöF—cà¢Æ'WGFöâ6Æ74æÖSÒ&'WGFöâ'WGFöâ×V–WB"öä6Æ–6³×²‚’Óâv–æF÷ræÆö6F–öâç&VÆöB‚—ÓãÅ&Vg&W6„7r6—¦S×³WÒóî˜xŞiki[NycÂö'WGFöãà¢ÂöF—cà¢Â÷6V7F–öãà ¢Ç6V7F–öâ6Æ74æÖSÒ&fVVB×7G&—#à¢ÆF—b6Æ74æÖSÒ&fVVB×7G&—×F—FÆR#ãÇ7â6Æ74æÖSÒ&fVVBÖ–6öâ#ãÄ7F—f—G’6—¦S×³WÒóãÂ÷7ããÆF—cãÇ7G&öæsîŠÎh8^Kènk©Â÷7G&öæsãÇ7ãç·7FFRæÖ&¶WBæÖöFRÓÓÒvÆ—fRrò~XZÎ™h²vV%6ö6¶WBr¢7FFRæÖ&¶WBæÖöFRÓÓÒvFVÖòrò~iÊÎj™şzK®zøNŠÎh8Rr¢~[{.KùŞZÙ[‹>iÊÎ‹8~ii’wÓÂ÷7ããÂöF—cãÂöF—cà¢ÆF—b6Æ74æÖSÒ&fVVB×6W&F÷""óà¢²…²v&—F÷&òrÂvö·‚uÒ2fVçVUµÒ’æÖ‡fVçVRÓâ°¢6öç7B7FGW2Ò7FFRæÖ&¶WBæ6öææV7F–öç5·fVçVUÓ°¢6öç7BÆFW7D&öö²Ò7FFRæÖ&¶WBæ&öö·5·fVçVRÓÓÒv&—F÷&òròv&—F÷&ó¤%D5õEtBr¢vö·ƒ¤%D2ÕU4EBuÓ°¢6öç7B&W7E&VG’ÒÆFW7D&öö³òç6÷W&6RÓÓÒw&W7BrbbÆFW7D&öö²ævUö×2ÃÒ7FFRç6WGF–æw2æÖ…ö&ööµövUö×3°¢6öç7B7FGW4Æ&VÂÒ7FFRæÖ&¶WBæÖöFRÓÓÒv†—7F÷'’rò~jÛ~Xû.jŠ[Èòr¢7FFRæÖ&¶WBæÖöFRÓÓÒvFVÖòrò~zK®zøNKènk©[{y"r¢7FGW3òæ6öææV7FVBòuvV%6ö6¶WB[{.˜
->{y¢r¢&W7E&VG’òu$U5B[ú¾xZ~XúşyJ‚r¢~zØ[è^ŠÎh8Rs°¢6öç7BÆ7E6VVâÒ7FGW3òæÆ7EöÖW76vU÷G2óò‡&W7E&VG’òÆFW7D&öö³òç&V6V—fVE÷G2¢çVÆÂ“°¢&WGW&âÆF—b6Æ74æÖSÒ&fVVB×6÷W&6R"¶W“×·fVçVWÓãÇ7â6Æ74æÖS×¶6÷W&6RÖF÷BG·7FGW3òæ6öææV7FVBÇÂ&W7E&VG’òv6öææV7FVBr¢rwÖÒóãÆF—cãÇ7G&öæsç·fVçVTÆ&VÂ‡fVçVR—ÓÂ÷7G&öæsãÇ7ãç·7FGW4Æ&VÇÓÂ÷7ããÂöF—cãÇ7â6Æ74æÖSÒ'6÷W&6R×F–ÖR#ç¶Æ7E6VVâòæWrFFR†Æ7E6VVâ’çFôÆö6ÆUF–ÖU7G&–ær‚w¦‚ÕErrÂ²†÷W#¢s"ÖF–v—BrÂÖ–çWFS¢s"ÖF–v—BrÂ6V6öæC¢s"ÖF–v—BrÒ’¢~(	BwÓÂ÷7ããÂöF—cã°¢Ò—Ğ¢ÆF—b6Æ74æÖS×¶fVVBÖ†VÇF‚G¶fVVEv&æ–æròwv&æ–ærr¢rwÖÓãÇ7â6Æ74æÖSÒ&†VÇF‚ÖÖ&²#ç¶fVVEv&æ–æròrr¢Ä6†V6²6—¦S×³'ÒóçÓÂ÷7ããÆF—cãÇ7G&öæsç·7FFRæÖ&¶WBæÖöFRÓÓÒv†—7F÷'’rò~jÛ~Xû.[‹>iÊÎjŠ[Èòr¢æô7W'&VçDÖ&¶WBò~zØ[è^iÈiXŠÎh8Rr¢7FÆT6÷VçBâòG·7FÆT6÷VçGÒiÊÎŠÎh8^˜îiÉö¢~ŠÎh8^x¸hX¾jÚ>[‹‚wÓÂ÷7G&öæsãÇ7ãç·7FFRæÖ&¶WBæÖöFRÓÓÒvÆ—fRrò~˜îiÉşh‰nKˆŞYÎjÚ^i˜.iª¾XÎjŠi:Âr¢7FFRæÖ&¶WBæÖöFRÓÓÒv†—7F÷'’rò~KˆŞhê^Xù~ikZ)îjŠi:Îh‰KªBr¢~zK®zøNX;jÎKˆŞXúşh‰KªBwÓÂ÷7ããÂöF—cãÂöF—cà¢Â÷6V7F–öãà ¢·7FFRæÖ&¶WBæÖöFRÓÓÒvFVÖòrbbÆF—b6Æ74æÖSÒ&FVÖò×v&æ–ær#ãÇ7ãäDTÔóÂ÷7ããÇîzK®zøNX;jÎX8^Ké¾K¸¾™Ú.ˆˆ~Šˆzé~kXzˆ¾š	ŠkŞûÈÎKˆŞˆ;ŞKº>ŠKªNi‰>h˜XÛ>i˜.ZX;h‰nXúşh‰KªNX;jÎ8#Â÷ãÆ'WGFöâöä6Æ–6³×²‚’Óâfö–B6†ævTÖöFR‚vÆ—fRr—ÓîXˆ~hù¾ˆ{>XÛ>i˜.ŠÎh8RÄ'&÷tF÷våW6—¦S×³7ÒóãÂö'WGFöããÂöF—cçĞ¢·7FFRæÖ&¶WBæÖöFRÓÓÒv†—7F÷'’rbbÆF—b6Æ74æÖSÒ&†—7F÷'’Öæ÷F–6R#ãÄ6Æö6³26—¦S×³WÒóãÇ7ãîjÛ~Xû.jŠ[ÈşXú®šşzK®iÊÎ{;¾{[[{.KùŞZÙy¨N[‹>iÊÎˆˆ~Šˆ®‰™ş{H˜ÈNûÉ¾yºîX˜ŞKˆŞhùKé¾jÛ~Xû.ZyNŠ‰~{şY¹îiKî8#Â÷7ããÂöF—cçĞ ¢Ç6V7F–öâ6Æ74æÖSÒ&ÖWG&–2Öw&–B#à¢ÆF—b6Æ74æÖSÒ&ÖWG&–2Ö6&B#ãÆF—b6Æ74æÖSÒ&ÖWG&–2Ö†VB#ãÇ7ãä%D2òU4EBKŠŞ™i>X;“Â÷7ããÇ7â6Æ74æÖSÒ&ÖWG&–2Ö–6öâ&ÇVR#ãÄvVvR6—¦S×³WÒóãÂ÷7ããÂöF—cãÆF—b6Æ74æÖSÒ&ÖWG&–2×fÇVR#ç¶ÆFW7E&–6RòBG¶ÖöæW’†ÆFW7E&–6RÂ"—Ö¢~(	BwÒÇ6ÖÆÃåU4ECÂ÷6ÖÆÃãÂöF—cãÆF—b6Æ74æÖSÒ&ÖWG&–2Öfö÷B#ãÇ7â6Æ74æÖSÒ&ÖWG&–2ÖF÷B&ÇVRÖF÷B"óç·7FFRæÖ&¶WBæÖöFRÓÓÒvÆ—fRròtôµ‚XZÎ™h¾ZyNŠ‰~{òr¢~zK®zøNŠÎh8RwÓÂöF—cãÆF—b6Æ74æÖSÒ'7&¶Æ–æR7&²Ö&ÇVR#ãÆ’óãÆ’óãÆ’óãÆ’óãÆ’óãÆ’óãÆ’óãÆ’óãÆ’óãÆ’óãÆ’óãÆ’óãÆ’óãÆ’óãÂöF—cãÂöF—cà¢ÆF—b6Æ74æÖSÒ&ÖWG&–2Ö6&B#ãÆF—b6Æ74æÖSÒ&ÖWG&–2Ö†VB#ãÇ7ãîXúşYû~ŠÎZY~XŠ‹zş[éÂ÷7ããÇ7â6Æ74æÖSÒ&ÖWG&–2Ö–6öâw&VVâ#ãÄ'&÷tÆVgE&–v‡B6—¦S×³WÒóãÂ÷7ããÂöF—cãÆF—b6Æ74æÖSÒ&ÖWG&–2×fÇVR#ç·7FFRæ÷÷'GVæ—F–W2æf–ÇFW"†—FVÒÓâ—FVÒç&VG’bbçVÖ&W"†—FVÒææWE÷7B’â’æÆVæwF‡ÓÇ6ÖÆÃâò·7FFRæ÷÷'GVæ—F–W2æÆVæwF‡Òj)ÓÂ÷6ÖÆÃãÂöF—cãÆF—b6Æ74æÖSÒ&ÖWG&–2Öfö÷B#ãÇ7â6Æ74æÖSÒ&ÖWG&–2ÖF÷Bw&VVâÖF÷B"óîhš>™šNŠŠŞZé®‹+¾xè~[èÎx+®jÚ3ÂöF—cãÆF—b6Æ74æÖSÒ'7&¶Æ–æR7&²Öw&VVâ#ãÆ’óãÆ’óãÆ’óãÆ’óãÆ’óãÆ’óãÆ’óãÆ’óãÆ’óãÆ’óãÆ’óãÆ’óãÆ’óãÆ’óãÂöF—cãÂöF—cà¢ÆF—b6Æ74æÖSÒ&ÖWG&–2Ö6&B#ãÆF—b6Æ74æÖSÒ&ÖWG&–2Ö†VB#ãÇ7ãîjŠi:Î[{.ZúnxûîiŞy¸£Â÷7ããÇ7â6Æ74æÖSÒ&ÖWG&–2Ö–6öâf–öÆWB#ãÅvÆÆWD6&G26—¦S×³WÒóãÂ÷7ããÂöF—cãÆF—b6Æ74æÖS×¶ÖWG&–2×fÇVRG·æÄ6Æ72‡&VÆ—¦VEæÂ—ÖÓç·&–Ö'•æÄVçG'’òG·&VÆ—¦VEæÂãÒòr²r¢rwÒG¶ÖöæW’‡&VÆ—¦VEæÂÂB—Ö¢~(	BwÒÇ6ÖÆÃç·&–Ö'•æÄVçG'“òå³Òóò~Xˆn[š>XŠRwÓÂ÷6ÖÆÃãÂöF—cãÆF—b6Æ74æÖSÒ&ÖWG&–2Öfö÷B#ãÇ7â6Æ74æÖSÒ&ÖWG&–2ÖF÷Bf–öÆWBÖF÷B"óç·F÷FÅG&FW2òG·F÷FÅG&FW7ÒzØbG¶÷F†W%æÄ76WG2ò+rG¶÷F†W%æÄ76WG7Ö¢~jŠi:Îh‰KªBwÖuÓkh‘éì¶»§q«^un>è™›æ“¬å¸³æˆ¶</span></div>
+import { useCallback, useEffect, useMemo, useState } from 'react';
+import {
+  Activity, ArrowDownUp, ArrowLeftRight, Bell, BookOpen, Check, ChevronDown,
+  CircleHelp, Clock3, Gauge, History, LayoutDashboard, Menu,
+  Play, RefreshCw, Settings2, ShieldCheck, SlidersHorizontal,
+  WalletCards, X,
+} from 'lucide-react';
+import { demoState } from './demo';
+import type { AppMode, DashboardState, Opportunity, OrderBook, TradingSettings, Trade, Signal, Venue } from './types';
+
+type View = 'overview' | 'signals' | 'ledger' | 'depth';
+const apiBase = import.meta.env.VITE_API_BASE ?? '';
+const modeLabel: Record<AppMode, string> = { demo: 'ç¤ºç¯„', live: 'å³æ™‚', history: 'æ­·å²' };
+
+function money(value: number | string, decimals = 2) {
+  const n = Number(value);
+  if (!Number.isFinite(n)) return 'â€”';
+  return new Intl.NumberFormat('zh-TW', { minimumFractionDigits: decimals, maximumFractionDigits: decimals }).format(n);
+}
+
+function venueLabel(venue: Venue) { return venue === 'bitopro' ? 'BitoPro' : 'OKX'; }
+function pnlClass(value: string | number) { return Number(value) >= 0 ? 'positive' : 'negative'; }
+
+function getBook(state: DashboardState, id?: string): OrderBook | undefined {
+  return id ? state.market.books[id] : undefined;
+}
+
+function App() {
+  const [state, setState] = useState<DashboardState>(demoState);
+  const [apiOnline, setApiOnline] = useState(false);
+  const [view, setView] = useState<View>('overview');
+  const [settingsOpen, setSettingsOpen] = useState(false);
+  const [balancesOpen, setBalancesOpen] = useState(false);
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const [toast, setToast] = useState('');
+  const [busyTrade, setBusyTrade] = useState<string | null>(null);
+  const [size, setSize] = useState<Record<string, string>>({});
+  const [formSettings, setFormSettings] = useState<TradingSettings>(demoState.settings);
+  const [savingSettings, setSavingSettings] = useState(false);
+  const [balanceDraft, setBalanceDraft] = useState<Record<string, string>>({});
+  const [savingBalances, setSavingBalances] = useState(false);
+
+  const receiveState = useCallback((incoming: DashboardState) => {
+    setState(incoming);
+    setApiOnline(true);
+  }, []);
+
+  function openSettings() {
+    setFormSettings(state.settings);
+    setSettingsOpen(true);
+  }
+
+  function openBalanceEditor() {
+    setBalanceDraft(Object.fromEntries(state.balances.map(item => [`${item.venue}:${item.asset}`, item.amount])));
+    setBalancesOpen(true);
+  }
+
+  useEffect(() => {
+    let disposed = false;
+    let socket: WebSocket | null = null;
+    let retry: number | undefined;
+    const load = async () => {
+      try {
+        const response = await fetch(`${apiBase}/api/state`, { cache: 'no-store' });
+        if (!response.ok) throw new Error('api offline');
+        receiveState(await response.json() as DashboardState);
+      } catch {
+        if (!disposed) setApiOnline(false);
+      }
+    };
+    const openSocket = () => {
+      const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+      const host = apiBase ? new URL(apiBase).host : window.location.host;
+      socket = new WebSocket(`${protocol}//${host}/ws`);
+      socket.onmessage = event => {
+        try { receiveState(JSON.parse(event.data) as DashboardState); } catch { /* ignore a malformed feed frame */ }
+      };
+      socket.onclose = () => { if (!disposed) retry = window.setTimeout(openSocket, 3000); };
+      socket.onerror = () => socket?.close();
+    };
+    void load();
+    openSocket();
+    const poll = window.setInterval(load, 7000);
+    return () => {
+      disposed = true;
+      window.clearInterval(poll);
+      if (retry) window.clearTimeout(retry);
+      socket?.close();
+    };
+  }, [receiveState]);
+
+  useEffect(() => {
+    if (!toast) return;
+    const timeout = window.setTimeout(() => setToast(''), 3200);
+    return () => window.clearTimeout(timeout);
+  }, [toast]);
+
+  const latestPrice = useMemo(() => {
+    const book = getBook(state, 'okx:BTC-USDT');
+    if (!book?.bids[0] || !book?.asks[0]) return null;
+    return (Number(book.bids[0].price) + Number(book.asks[0].price)) / 2;
+  }, [state]);
+
+  const staleCount = useMemo(() => Object.values(state.market.books).filter(book => !book.valid || book.age_ms > state.settings.max_book_age_ms).length, [state]);
+  const noCurrentMarket = state.market.mode === 'history' || Object.keys(state.market.books).length === 0;
+  const feedWarning = noCurrentMarket || staleCount > 0;
+  const totalTrades = state.summary?.trade_count ?? state.trades.length;
+  const realizedPnlByAsset = state.summary?.realized_pnl_by_asset ?? {};
+  const pnlEntries = Object.entries(realizedPnlByAsset);
+  const primaryPnlEntry = pnlEntries.find(([asset]) => asset === 'USDT') ?? pnlEntries[0];
+  const realizedPnl = Number(primaryPnlEntry?.[1] ?? 0);
+  const otherPnlAssets = pnlEntries.filter(([asset]) => asset !== primaryPnlEntry?.[0]).map(([asset, amount]) => `${asset} ${money(amount, 2)}`).join(' Â· ');
+
+  async function changeMode(mode: AppMode) {
+    if (!apiOnline) {
+      setToast('è«‹å…ˆå•Ÿå‹•æœ¬æ©Ÿæœå‹™ï¼Œå†åˆ‡æ›è³‡æ–™æ¨¡å¼');
+      return;
+    }
+    try {
+      const response = await fetch(`${apiBase}/api/mode`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ mode }) });
+      if (!response.ok) throw new Error('mode change failed');
+      const next = await (await fetch(`${apiBase}/api/state`, { cache: 'no-store' })).json() as DashboardState;
+      receiveState(next);
+      setToast(`å·²åˆ‡æ›è‡³${modeLabel[mode]}è³‡æ–™æ¨¡å¼`);
+    } catch { setToast('è³‡æ–™æ¨¡å¼åˆ‡æ›å¤±æ•—ï¼Œè«‹ç¢ºèªå¾Œç«¯æœå‹™ç‹€æ…‹'); }
+  }
+
+  async function simulate(item: Opportunity) {
+    if (!apiOnline) { setToast('æ¨¡æ“¬æœå‹™å°šæœªé€£ç·šï¼Œè«‹å…ˆå•Ÿå‹•å°ˆæ¡ˆ'); return; }
+    const defaultSize = item.kind === 'cross' ? '0.001' : '10000';
+    const amount = size[item.id] || defaultSize;
+    setBusyTrade(item.id);
+    try {
+      const response = await fetch(`${apiBase}/api/simulations`, {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ strategy_id: item.id, size: amount }),
+      });
+      const result = await response.json();
+      if (!response.ok) throw new Error(result.detail || 'æ¨¡æ“¬æˆäº¤å¤±æ•—');
+      const refreshed = await (await fetch(`${apiBase}/api/state`, { cache: 'no-store' })).json() as DashboardState;
+      receiveState(refreshed);
+      setToast(`æ¨¡æ“¬å®Œæˆï¼š${money(result.pnl, 4)} ${result.end_asset}`);
+    } catch (error) {
+      setToast(error instanceof Error ? error.message : 'æ¨¡æ“¬æˆäº¤å¤±æ•—');
+    } finally { setBusyTrade(null); }
+  }
+
+  async function saveSettings() {
+    if (!apiOnline) { setToast('è«‹å…ˆå•Ÿå‹•æœ¬æ©Ÿæœå‹™ï¼Œå†å„²å­˜è¨­å®š'); return; }
+    setSavingSettings(true);
+    try {
+      const response = await fetch(`${apiBase}/api/settings`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(formSettings) });
+      if (!response.ok) throw new Error('è¨­å®šå„²å­˜å¤±æ•—');
+      const refreshed = await (await fetch(`${apiBase}/api/state`, { cache: 'no-store' })).json() as DashboardState;
+      receiveState(refreshed);
+      setSettingsOpen(false);
+      setToast('ç›£æ§èˆ‡æ¨¡æ“¬æ¢ä»¶å·²å„²å­˜');
+    } catch (error) { setToast(error instanceof Error ? error.message : 'è¨­å®šå„²å­˜å¤±æ•—'); }
+    finally { setSavingSettings(false); }
+  }
+
+  async function saveBalances() {
+    if (!apiOnline) { setToast('è«‹å…ˆå•Ÿå‹•æœ¬æ©Ÿæœå‹™ï¼Œå†èª¿æ•´è™›æ“¬è³‡ç”¢'); return; }
+    setSavingBalances(true);
+    try {
+      const balances = Object.entries(balanceDraft).map(([key, amount]) => {
+        const [venue, asset] = key.split(':');
+        return { venue, asset, amount };
+      });
+      const response = await fetch(`${apiBase}/api/balances`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ balances }) });
+      const result = await response.json();
+      if (!response.ok) throw new Error(result.detail || 'è™›æ“¬è³‡ç”¢å„²å­˜å¤±æ•—');
+      const refreshed = await (await fetch(`${apiBase}/api/state`, { cache: 'no-store' })).json() as DashboardState;
+      receiveState(refreshed);
+      setBalancesOpen(false);
+      setToast('è™›æ“¬è³‡ç”¢å·²æ›´æ–°ï¼›æ—¢æœ‰å¸³æœ¬ç´€éŒ„ä¿ç•™');
+    } catch (error) { setToast(error instanceof Error ? error.message : 'è™›æ“¬è³‡ç”¢å„²å­˜å¤±æ•—'); }
+    finally { setSavingBalances(false); }
+  }
+
+  const nav = [
+    { id: 'overview' as View, label: 'ç¸½è¦½', icon: LayoutDashboard },
+    { id: 'signals' as View, label: 'å¥—åˆ©è¨Šè™Ÿ', icon: Activity, count: state.opportunities.length },
+    { id: 'ledger' as View, label: 'æ¨¡æ“¬å¸³æœ¬', icon: History, count: totalTrades || undefined },
+    { id: 'depth' as View, label: 'å§”è¨—ç°¿æ·±åº¦', icon: BookOpen },
+  ];
+
+  return (
+    <div className="app-shell">
+      <aside className={`sidebar ${mobileNavOpen ? 'mobile-open' : ''}`}>
+        <div className="brand-lockup">
+          <div className="brand-mark"><ArrowLeftRight size={19} /></div>
+          <div><strong>ARBITRAGE</strong><span>DESK Â· PAPER</span></div>
+          <button className="icon-button close-mobile" aria-label="é—œé–‰é¸å–®" onClick={() => setMobileNavOpen(false)}><X size={18} /></button>
+        </div>
+        <div className="workspace-switcher">
+          <div className="workspace-avatar">AD</div>
+          <div><strong>å€‹äººæ¨¡æ“¬å·¥ä½œå°</strong><span>å–®äººè™›æ“¬å¸³æˆ¶</span></div>
+          <ChevronDown size={15} className="muted-icon" />
+        </div>
+        <div className="nav-caption">å·¥ä½œå€</div>
+        <nav className="main-nav" aria-label="ä¸»é¸å–®">
+          {nav.map(item => <button key={item.id} className={`nav-item ${view === item.id ? 'active' : ''}`} onClick={() => { setView(item.id); setMobileNavOpen(false); }}>
+            <item.icon size={17} strokeWidth={1.8} /><span>{item.label}</span>{item.count ? <small>{item.count}</small> : null}
+          </button>)}
+        </nav>
+        <div className="nav-caption market-caption">ç›£æ§å¸‚å ´</div>
+        <div className="market-nav-item"><span className="coin-icon btc">â‚¿</span><span>BTC / USDT</span><span className="market-live-dot" /></div>
+        <div className="market-nav-item"><span className="coin-icon twd">$</span><span>BTC / TWD</span><span className="market-live-dot" /></div>
+        <div className="sidebar-bottom">
+          <div className="safe-box"><ShieldCheck size={17} /><div><strong>åƒ…é™æ¨¡æ“¬äº¤æ˜“</strong><span>ä¸æœƒé€å‡ºçœŸå¯¦è¨‚å–®</span></div></div>
+          <button className="nav-item" onClick={openSettings}><Settings2 size={17} /><span>è¨­å®š</span></button>
+          <div className="profile-row"><div className="profile-avatar">L</div><div><strong>æœ¬æ©Ÿæ“ä½œè€…</strong><span>è³‡æ–™ä¿å­˜åœ¨æœ¬æ©Ÿè³‡æ–™åº«</span></div><CircleHelp size={16} className="muted-icon" /></div>
+        </div>
+      </aside>
+
+      {mobileNavOpen && <button className="mobile-scrim" aria-label="é—œé–‰å°è¦½" onClick={() => setMobileNavOpen(false)} />}
+
+      <main className="main-content">
+        <header className="topbar">
+          <div className="topbar-left">
+            <button className="icon-button menu-toggle" aria-label="é–‹å•Ÿé¸å–®" onClick={() => setMobileNavOpen(true)}><Menu size={19} /></button>
+            <div className="breadcrumbs"><span>ç›£æ§å·¥ä½œå€</span><span className="crumb-slash">/</span><strong>{nav.find(item => item.id === view)?.label}</strong></div>
+          </div>
+          <div className="topbar-right">
+            <div className="mode-select-wrap"><span className={`mode-dot ${state.market.mode}`} />
+              <select aria-label="è³‡æ–™æ¨¡å¼" value={state.market.mode} onChange={event => void changeMode(event.target.value as AppMode)}>
+                <option value="demo">ç¤ºç¯„è³‡æ–™</option><option value="live">å³æ™‚è¡Œæƒ…</option><option value="history">æ­·å²å¸³æœ¬</option>
+              </select><ChevronDown size={13} className="select-caret" />
+            </div>
+            <div className={`api-status ${apiOnline ? 'online' : 'offline'}`}><span />{apiOnline ? 'å¾Œç«¯å·²é€£ç·š' : 'å‰ç«¯ç¤ºç¯„ç•«é¢'}</div>
+            <button className="icon-button bell-button" aria-label="é€šçŸ¥"><Bell size={17} /><i /></button>
+            <button className="icon-button settings-shortcut" aria-label="è¨­å®š" onClick={openSettings}><SlidersHorizontal size={17} /></button>
+          </div>
+        </header>
+
+        <div className="page-wrap">
+          <section className="page-heading">
+            <div>
+              <div className="eyebrow"><span className="eyebrow-line" /> MARKET MONITOR <span className="eyebrow-date">{new Intl.DateTimeFormat('zh-TW', { dateStyle: 'medium' }).format(new Date())}</span></div>
+              <h1>{view === 'overview' ? 'å¥—åˆ©ç›£æ§ç¸½è¦½' : nav.find(item => item.id === view)?.label}</h1>
+              <p>{view === 'overview' ? 'è¿½è¹¤è·¨æ‰€åƒ¹å·®ã€ä¸‰è§’è·¯å¾‘èˆ‡æ¨¡æ“¬å¸³æˆ¶ç‹€æ…‹ã€‚' : view === 'ledger' ? 'æª¢è¦–æ¯æ¬¡æ¨¡æ“¬çš„æˆäº¤æ­¥é©Ÿã€è²»ç”¨å‡è¨­èˆ‡é¤˜é¡è®ŠåŒ–ã€‚' : view === 'depth' ? 'ä½¿ç”¨å¯è¦‹å§”è¨—ç°¿ä¼°ç®—æˆäº¤é‡ã€VWAP èˆ‡æ»‘åƒ¹ã€‚' : 'ä»¥æ‰£é™¤å‡è¨­è²»ç‡å¾Œçš„åƒ¹å·®æ’åºï¼Œæ·±åº¦ä¸è¶³æ™‚ä¸å»ºç«‹æ¨¡æ“¬æˆäº¤ã€‚'}</p>
+            </div>
+            <div className="heading-actions">
+              <div className="last-updated"><span className="status-pulse" />æ›´æ–°æ–¼ {new Date(state.market.generated_at).toLocaleTimeString('zh-TW', { hour: '2-digit', minute: '2-digit', second: '2-digit' })}</div>
+              <button className="button button-quiet" onClick={() => window.location.reload()}><RefreshCw size={15} />é‡æ–°æ•´ç†</button>
+            </div>
+          </section>
+
+          <section className="feed-strip">
+            <div className="feed-strip-title"><span className="feed-icon"><Activity size={15} /></span><div><strong>è¡Œæƒ…ä¾†æº</strong><span>{state.market.mode === 'live' ? 'å…¬é–‹ WebSocket' : state.market.mode === 'demo' ? 'æœ¬æ©Ÿç¤ºç¯„è¡Œæƒ…' : 'å·²ä¿å­˜å¸³æœ¬è³‡æ–™'}</span></div></div>
+            <div className="feed-separator" />
+            {(['bitopro', 'okx'] as Venue[]).map(venue => {
+              const status = state.market.connections[venue];
+              const latestBook = state.market.books[venue === 'bitopro' ? 'bitopro:BTC_TWD' : 'okx:BTC-USDT'];
+              const restReady = latestBook?.source === 'rest' && latestBook.age_ms <= state.settings.max_book_age_ms;
+              const statusLabel = state.market.mode === 'history' ? 'æ­·å²æ¨¡å¼' : state.market.mode === 'demo' ? 'ç¤ºç¯„ä¾†æºå°±ç·’' : status?.connected ? 'WebSocket å·²é€£ç·š' : restReady ? 'REST å¿«ç…§å¯ç”¨' : 'ç­‰å¾…è¡Œæƒ…';
+              const lastSeen = status?.last_message_ts ?? (restReady ? latestBook?.received_ts : null);
+              return <div className="feed-source" key={venue}><span className={`source-dot ${status?.connected || restReady ? 'connected' : ''}`} /><div><strong>{venueLabel(venue)}</strong><span>{statusLabel}</span></div><span className="source-time">{lastSeen ? new Date(lastSeen).toLocaleTimeString('zh-TW', { hour: '2-digit', minute: '2-digit', second: '2-digit' }) : 'â€”'}</span></div>;
+            })}
+            <div className={`feed-health ${feedWarning ? 'warning' : ''}`}><span className="health-mark">{feedWarning ? '!' : <Check size={12} />}</span><div><strong>{state.market.mode === 'history' ? 'æ­·å²å¸³æœ¬æ¨¡å¼' : noCurrentMarket ? 'ç­‰å¾…æœ‰æ•ˆè¡Œæƒ…' : staleCount > 0 ? `${staleCount} æœ¬è¡Œæƒ…éæœŸ` : 'è¡Œæƒ…ç‹€æ…‹æ­£å¸¸'}</strong><span>{state.market.mode === 'live' ? 'éæœŸæˆ–ä¸åŒæ­¥æ™‚æš«åœæ¨¡æ“¬' : state.market.mode === 'history' ? 'ä¸æ¥å—æ–°å¢æ¨¡æ“¬æˆäº¤' : 'ç¤ºç¯„åƒ¹æ ¼ä¸å¯æˆäº¤'}</span></div></div>
+          </section>
+
+          {state.market.mode === 'demo' && <div className="demo-warning"><span>DEMO</span><p>ç¤ºç¯„åƒ¹æ ¼åƒ…ä¾›ä»‹é¢èˆ‡è¨ˆç®—æµç¨‹é è¦½ï¼Œä¸èƒ½ä»£è¡¨äº¤æ˜“æ‰€å³æ™‚å ±åƒ¹æˆ–å¯æˆäº¤åƒ¹æ ¼ã€‚</p><button onClick={() => void changeMode('live')}>åˆ‡æ›è‡³å³æ™‚è¡Œæƒ… <ArrowDownUp size={13} /></button></div>}
+          {state.market.mode === 'history' && <div className="history-notice"><Clock3 size={15} /><span>æ­·å²æ¨¡å¼åªé¡¯ç¤ºæœ¬ç³»çµ±å·²ä¿å­˜çš„å¸³æœ¬èˆ‡è¨Šè™Ÿç´€éŒ„ï¼›ç›®å‰ä¸æä¾›æ­·å²å§”è¨—ç°¿å›æ”¾ã€‚</span></div>}
+
+          <section className="metric-grid">
+            <div className="metric-card"><div className="metric-head"><span>BTC / USDT ä¸­é–“åƒ¹</span><span className="metric-icon blue"><Gauge size={15} /></span></div><div className="metric-value">{latestPrice ? `$${money(latestPrice, 2)}` : 'â€”'} <small>USDT</small></div><div className="metric-foot"><span className="metric-dot blue-dot" />{state.market.mode === 'live' ? 'OKX å…¬é–‹å§”è¨—ç°¿' : 'ç¤ºç¯„è¡Œæƒ…'}</div><div className="sparkline spark-blue"><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /></div></div>
+            <div className="metric-card"><div className="metric-head"><span>å¯åŸ·è¡Œå¥—åˆ©è·¯å¾‘</span><span className="metric-icon green"><ArrowLeftRight size={15} /></span></div><div className="metric-value">{state.opportunities.filter(item => item.ready && Number(item.net_pct) > 0).length}<small> / {state.opportunities.length} æ¢</small></div><div className="metric-foot"><span className="metric-dot green-dot" />æ‰£é™¤è¨­å®šè²»ç‡å¾Œç‚ºæ­£</div><div className="sparkline spark-green"><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /></div></div>
+            <div className="metric-card"><div className="metric-head"><span>æ¨¡æ“¬å·²å¯¦ç¾æç›Š</span><span className="metric-icon violet"><WalletCards size={15} /></span></div><div className={`metric-value ${pnlClass(realizedPnl)}`}>{primaryPnlEntry ? `${realizedPnl >= 0 ? '+' : ''}${money(realizedPnl, 4)}` : 'â€”'} <small>{primaryPnlEntry?.[0] ?? 'åˆ†å¹£åˆ¥'}</small></div><div className="metric-foot"><span className="metric-dot violet-dot" />{totalTrades ? `${totalTrades} ç­†${otherPnlAssets ? ` Â· ${otherPnlAssets}` : 'æ¨¡æ“¬æˆäº¤'}` : 'å°šç„¡æ¨¡æ“¬æˆäº¤'}</div><div className="sparkline spark-violet"><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /></div></div>
+            <div className="metric-card"><div className="metric-head"><span>è¡Œæƒ…æ–°é®®åº¦</span><span className={`metric-icon ${feedWarning ? 'amber' : 'green'}`}><Clock3 size={15} /></span></div><div className="metric-value">{state.market.mode === 'history' ? 'æ­·å²æ¨¡å¼' : noCurrentMarket ? 'ç­‰å¾…ä¸­' : staleCount ? 'éœ€æª¢æŸ¥' : 'æ­£å¸¸'}<small>{state.market.mode === 'history' ? '' : staleCount ? ` Â· ${staleCount} æœ¬éæœŸ` : ` Â· â‰¤ ${state.settings.max_book_age_ms} ms`}</small></div><div className="metric-foot"><span className={`metric-dot ${feedWarning ? 'amber-dot' : 'green-dot'}`} />{state.market.mode === 'history' ? 'ä¸æ¥å—æ–°å¢æˆäº¤' : 'è¡Œæƒ…å¤±æ•ˆæ™‚åœç”¨æ¨¡æ“¬'}</div><div className="sparkline spark-amber"><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /></div></div>
+          </section>
+
+          {(view === 'overview' || view === 'signals') && <section className="content-grid">
+            <div className="panel opportunity-panel">
+              <div className="panel-heading"><div><span className="panel-kicker">OPPORTUNITIES</span><h2>å¥—åˆ©è·¯å¾‘</h2></div><div className="panel-tools"><span className="fee-note">å·²è¨ˆå…¥è²»ç‡ä¼°ç®—</span><button className="text-button" onClick={openSettings}>è²»ç‡è¨­å®š <ChevronDown size={13} /></button></div></div>
+              <div className="table-head opportunity-head"><span>ç­–ç•¥ / è·¯å¾‘</span><span>åƒ¹å·®</span><span>æ·¨åˆ©ç‡</span><span>ç‹€æ…‹</span><span></span></div>
+              <div className="opportunity-list">{state.opportunities.map((item, index) => <OpportunityRow key={item.id} item={item} index={index} onSimulate={() => void simulate(item)} busy={busyTrade === item.id} apiOnline={apiOnline} amount={size[item.id] ?? (item.kind === 'cross' ? '0.001' : '10000')} onAmountChange={value => setSize(current => ({ ...current, [item.id]: value }))} mode={state.market.mode} />)}</div>
+              <div className="panel-footnote"><ShieldCheck size={14} /><span>æ¨¡æ“¬æŒ‰å§”è¨—ç°¿æ·±åº¦é€æª”ä¼°ç®—ï¼›æ·±åº¦ä¸è¶³ã€å ±åƒ¹éæœŸæˆ–è·¯å¾‘ä¸åŒæ­¥æ™‚æœƒæ‹’çµ•æ•´ç­†ã€‚</span></div>
+            </div>
+
+            <div className="panel account-panel">
+              <div className="panel-heading"><div><span className="panel-kicker">PAPER ACCOUNTS</span><h2>è™›æ“¬è³‡ç”¢</h2></div><button className="text-button" onClick={openBalanceEditor}>èª¿æ•´é¤˜é¡ <ChevronDown size={13} /></button></div>
+              <div className="account-total-row"><span>å…©æ‰€è³‡ç”¢</span><span className="account-value">{state.balances.length ? `${state.balances.length} é …` : 'â€”'}</span></div>
+              <div className="account-group">
+                <div className="account-exchange"><span className="exchange-logo bito-logo">B</span><strong>BitoPro</strong><span>è™›æ“¬å¸³æˆ¶</span></div>
+                {(['TWD', 'BTC', 'USDT'] as const).map(asset => <AssetRow key={`bitopro-${asset}`} state={state} venue="bitopro" asset={asset} />)}
+              </div>
+              <div className="account-group second">
+                <div className="account-exchange"><span className="exchange-logo okx-logo">O</span><strong>OKX</strong><span>è™›æ“¬å¸³æˆ¶</span></div>
                 {(['BTC', 'USDT'] as const).map(asset => <AssetRow key={`okx-${asset}`} state={state} venue="okx" asset={asset} />)}
               </div>
               <div className="account-note"><span className="mini-check"><Check size={11} /></span>äº¤æ˜“å‰éœ€åœ¨å„äº¤æ˜“æ‰€é å…ˆæŒæœ‰è³‡ç”¢ï¼›ä¸å‡è¨­å³æ™‚è·¨æ‰€è½‰å¸³ã€‚</div>
