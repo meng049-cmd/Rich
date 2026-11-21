@@ -10,6 +10,16 @@ BitoPro × OKX BTC/USDT monitoring and simulated arbitrage desk. The application
 
 The default is **demo mode**. Change `MARKET_DATA_MODE=live` in `.env` and restart the service to connect to the public BitoPro and OKX order books. Paper trades and settings are stored in PostgreSQL. All fees are configurable estimates and are shown as assumptions. The web port is bound to `127.0.0.1`; add authentication and HTTPS before exposing any instance to another network.
 
+## Hosted deployment
+
+The Vercel frontend project is configured to proxy `/api/*` to the persistent FastAPI service. Deploy the repository root as a Railway service using `railway.json`, add a Railway PostgreSQL service, and set the backend service variables:
+
+- `DATABASE_URL` to Railway's private PostgreSQL connection URL.
+- `MARKET_DATA_MODE=live`.
+- `BACKEND_PROXY_SECRET` to a long random secret shared with the Vercel project.
+
+Set the Vercel production variables `BACKEND_URL` to the Railway service's public HTTPS URL and `BACKEND_PROXY_SECRET` to the same secret. The frontend uses same-origin requests, so the backend remains protected by the injected secret and Vercel's project access protection. Keep `auto_simulation_enabled` off until you explicitly turn it on in the dashboard.
+
 The starting paper balances in `backend/main.py` are illustrative only. Adjust them from **虛擬資產 → 調整餘額** before making simulated trades. Existing ledger rows are retained when balances change.
 
 ## First-version scope

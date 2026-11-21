@@ -19,6 +19,7 @@ services:
       dockerfile: backend/Dockerfile
     environment:
       DATABASE_URL: postgresql+asyncpg://arb:arb@postgres:5432/arb
+      BACKEND_PROXY_SECRET: ${BACKEND_PROXY_SECRET:?Set BACKEND_PROXY_SECRET in .env}
       MARKET_DATA_MODE: ${MARKET_DATA_MODE:-demo}
       BITOPRO_TAKER_FEE_BPS: ${BITOPRO_TAKER_FEE_BPS:-10}
       OKX_TAKER_FEE_BPS: ${OKX_TAKER_FEE_BPS:-10}
@@ -37,6 +38,8 @@ services:
       dockerfile: frontend/Dockerfile
     ports:
       - "127.0.0.1:8080:80"
+    environment:
+      BACKEND_PROXY_SECRET: ${BACKEND_PROXY_SECRET:?Set BACKEND_PROXY_SECRET in .env}
     depends_on:
       - api
 
