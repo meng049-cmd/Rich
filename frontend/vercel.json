@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "regions": ["sin1"],
+  "functions": {
+    "api/rich.py": { "maxDuration": 30, "includeFiles": "server/**" }
+  },
+  "rewrites": [
+    { "source": "/api/:path*", "destination": "/api/rich" }
+  ]
+}

@@ -10,17 +10,17 @@ BitoPro × OKX BTC/USDT monitoring and simulated arbitrage desk. The application
 
 The default is **demo mode**. Change `MARKET_DATA_MODE=live` in `.env` and restart the service to connect to the public BitoPro and OKX order books. Paper trades and settings are stored in PostgreSQL. All fees are configurable estimates and are shown as assumptions. The web port is bound to `127.0.0.1`; add authentication and HTTPS before exposing any instance to another network.
 
-## Hosted deployment
+## Vercel deployment
 
-The Vercel frontend project is configured to proxy `/api/*` to the persistent FastAPI service. Deploy the repository root as a Railway service using `railway.json`, add a Railway PostgreSQL service, and set the backend service variables:
+The Rich Vercel project builds from the existing `frontend` directory. Vite serves the React dashboard, and `frontend/vercel.json` routes `/api/*` to the FastAPI function on the same domain.
 
-- `DATABASE_URL` to Railway's private PostgreSQL connection URL.
-- `MARKET_DATA_MODE=live`.
-- `BACKEND_PROXY_SECRET` to a long random secret shared with the Vercel project.
+1. Connect a dedicated PostgreSQL database to Rich's production environment. The Neon integration supplies `DATABASE_URL_UNPOOLED` and `DATABASE_URL`. A direct TLS connection string is preferred.
+2. Set `RICH_LEDGER_ACCESS_KEY` to a random secret of at least 32 characters in Rich's production environment, then redeploy. The same key opens the paper ledger and its settings in the dashboard.
+3. Open the production deployment. The default mode is **即時行情**. Choose **登入模擬帳本** to load balances, adjust settings, or execute a simulated trade.
 
-Set the Vercel production variables `BACKEND_URL` to the Railway service's public HTTPS URL and `BACKEND_PROXY_SECRET` to the same secret. The frontend uses same-origin requests, so the backend remains protected by the injected secret and Vercel's project access protection. Keep `auto_simulation_enabled` off until you explicitly turn it on in the dashboard.
+The Vercel deployment fetches public order book snapshots on demand, about every five seconds while the dashboard is visible. BitoPro REST snapshots can lack an exchange timestamp, in which case freshness and time skew use the server's receipt time. Every manual simulation requests a fresh snapshot. The ledger rejects expired quotes, insufficient depth, and insufficient funds. Automatic paper simulation starts disabled. If enabled, it runs during signed-in updates in live mode. Closing or leaving the page pauses polling and automatic simulation.
 
-The starting paper balances in `backend/main.py` are illustrative only. Adjust them from **虛擬資產 → 調整餘額** before making simulated trades. Existing ledger rows are retained when balances change.
+The Docker Compose deployment runs the persistent WebSocket feed and monitor. The starting paper balances defined in `frontend/server/core.py` are illustrative. Adjust them from **虛擬資產 → 調整餘額** before making simulated trades. Existing ledger rows are retained when balances change.
 
 ## First-version scope
 
@@ -29,8 +29,8 @@ The starting paper balances in `backend/main.py` are illustrative only. Adjust t
 - Two cross-exchange BTC/USDT directions and two BitoPro triangular routes.
 - Depth-walk pricing, fee estimates, stale-book and time-skew checks, simulated balances, and a persistent paper ledger.
 - Optional threshold-based paper simulation. It starts disabled and can be paused from the UI.
-- Signal-state history begins when the service is started and saves state changes with the associated market snapshot.
-- A browser-friendly REST API and WebSocket feed.
+- Market signal history is stored with the source and observed prices. Vercel records observations during signed-in live updates, at most once per route per five minutes.
+- A REST API. The persistent Docker Compose deployment also provides a WebSocket feed.
 
 Historical depth replay, exchange lot-size metadata, multi-user accounts, external notifications, and live orders are outside this version. The history tab accumulates paper trades and signal-state changes from this deployment; it does not invent historical order-book data.
 
@@ -40,7 +40,7 @@ The frontend and backend are separate services. Start PostgreSQL, install `backe
 
 ## Safety and data handling
 
-- The backend calls public market-data WebSocket endpoints only.
+- The backend only uses public market-data endpoints.
 - `POST /api/simulations` updates only the local PostgreSQL paper ledger.
 - No exchange keys or personal credentials are read or stored.
 - Demo prices are clearly marked and must never be interpreted as executable quotes.

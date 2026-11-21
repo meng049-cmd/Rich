@@ -1,7 +1,7 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
   Activity, ArrowDownUp, ArrowLeftRight, Bell, BookOpen, Check, ChevronDown,
-  CircleHelp, Clock3, Gauge, History, LayoutDashboard, Menu,
+  CircleHelp, Clock3, Gauge, History, KeyRound, LayoutDashboard, Menu,
   Play, RefreshCw, Settings2, ShieldCheck, SlidersHorizontal,
   WalletCards, X,
 } from 'lucide-react';
@@ -11,6 +11,18 @@ import type { AppMode, DashboardState, Opportunity, OrderBook, TradingSettings, 
 type View = 'overview' | 'signals' | 'ledger' | 'depth';
 const apiBase = import.meta.env.VITE_API_BASE ?? '';
 const modeLabel: Record<AppMode, string> = { demo: '示範', live: '即時', history: '歷史' };
+
+async function requestApi<T>(path: string, options?: RequestInit): Promise<T> {
+  const response = await fetch(`${apiBase}/api/${path}`, { cache: 'no-store', ...options });
+  if (!response.headers.get('content-type')?.includes('application/json')) {
+    throw new Error('Rich 後端暫無回應');
+  }
+  const result = await response.json();
+  if (!response.ok) {
+    throw new Error(typeof result.detail === 'string' ? result.detail : '無法完成操作，請檢查輸入');
+  }
+  return result as T;
+}
 
 function money(value: number | string, decimals = 2) {
   const n = Number(value);
@@ -39,33 +51,88 @@ function App() {
   const [savingSettings, setSavingSettings] = useState(false);
   const [balanceDraft, setBalanceDraft] = useState<Record<string, string>>({});
   const [savingBalances, setSavingBalances] = useState(false);
+  const [signInOpen, setSignInOpen] = useState(false);
+  const [accessKey, setAccessKey] = useState('');
+  const [signingIn, setSigningIn] = useState(false);
+  const [hostedMode, setHostedMode] = useState<AppMode>('live');
+  const [feedAge, setFeedAge] = useState(0);
+  const lastUpdate = useRef(performance.now());
+  const lastHosting = useRef<DashboardState['hosting']>(undefined);
 
   const receiveState = useCallback((incoming: DashboardState) => {
+    lastHosting.current = incoming.hosting;
+    lastUpdate.current = performance.now();
+    setFeedAge(0);
     setState(incoming);
     setApiOnline(true);
   }, []);
 
+  const ledgerStatus = state.hosting?.ledger_status;
+  const ledgerReady = apiOnline && (!state.hosting || (ledgerStatus === 'ready' && state.market.mode !== 'demo'));
+  const ledgerMessage = ledgerStatus === 'setup' ? 'Rich 的 PostgreSQL 帳本尚未連接。'
+    : ledgerStatus === 'unavailable' ? 'PostgreSQL 暫時無法連線。'
+    : ledgerStatus === 'locked' ? '登入即可查看帳本與執行模擬。'
+    : state.hosting && state.market.mode === 'demo' ? '切換到即時或歷史模式即可開啟帳本。' : '等待 Rich 後端連線。';
+
   function openSettings() {
+    if (!ledgerReady) {
+      if (ledgerStatus === 'locked') setSignInOpen(true);
+      else setToast(ledgerMessage);
+      return;
+    }
     setFormSettings(state.settings);
     setSettingsOpen(true);
   }
 
   function openBalanceEditor() {
+    if (!ledgerReady) {
+      if (ledgerStatus === 'locked') setSignInOpen(true);
+      else setToast(ledgerMessage);
+      return;
+    }
     setBalanceDraft(Object.fromEntries(state.balances.map(item => [`${item.venue}:${item.asset}`, item.amount])));
     setBalancesOpen(true);
   }
 
+  const refreshState = useCallback(async () => {
+    const next = await requestApi<DashboardState>(`state?mode=${hostedMode}`);
+    receiveState(next);
+  }, [hostedMode, receiveState]);
+
   useEffect(() => {
     let disposed = false;
     let socket: WebSocket | null = null;
-    let retry: number | undefined;
+    let timer: number | undefined;
+    let pending = false;
+    let controller: AbortController | undefined;
     const load = async () => {
+      if (disposed || pending || document.visibilityState === 'hidden') return;
+      window.clearTimeout(timer);
+      pending = true;
+      controller = new AbortController();
+      const current = lastHosting.current;
       try {
-        const response = await fetch(`${apiBase}/api/state`, { cache: 'no-store' });
-        if (!response.ok) throw new Error('api offline');
-        receiveState(await response.json() as DashboardState);
+        let next: DashboardState;
+        if (current?.ledger_status === 'ready' && hostedMode === 'live') {
+          try {
+            next = await requestApi<DashboardState>('monitor', { method: 'POST', signal: controller.signal });
+          } catch {
+            next = await requestApi<DashboardState>('state?mode=live', { signal: controller.signal });
+          }
+        } else {
+          next = await requestApi<DashboardState>(`state?mode=${hostedMode}`, { signal: controller.signal });
+        }
+        if (!disposed) {
+          receiveState(next);
+          if (!next.hosting && !socket) openSocket();
+        }
       } catch {
         if (!disposed) setApiOnline(false);
+      } finally {
+        pending = false;
+        if (!disposed && document.visibilityState === 'visible') {
+          timer = window.setTimeout(load, lastHosting.current?.poll_interval_ms ?? 7000);
+        }
       }
     };
     const openSocket = () => {
@@ -73,21 +140,29 @@ function App() {
       const host = apiBase ? new URL(apiBase).host : window.location.host;
       socket = new WebSocket(`${protocol}//${host}/ws`);
       socket.onmessage = event => {
-        try { receiveState(JSON.parse(event.data) as DashboardState); } catch { /* ignore a malformed feed frame */ }
+        if (!disposed && document.visibilityState === 'visible') {
+          try { receiveState(JSON.parse(event.data) as DashboardState); } catch { /* Ignore a malformed feed frame. */ }
+        }
       };
-      socket.onclose = () => { if (!disposed) retry = window.setTimeout(openSocket, 3000); };
+      socket.onclose = () => { socket = null; };
       socket.onerror = () => socket?.close();
     };
     void load();
-    openSocket();
-    const poll = window.setInterval(load, 7000);
+    const onVisibilityChange = () => { void load(); };
+    document.addEventListener('visibilitychange', onVisibilityChange);
     return () => {
       disposed = true;
-      window.clearInterval(poll);
-      if (retry) window.clearTimeout(retry);
+      window.clearTimeout(timer);
+      document.removeEventListener('visibilitychange', onVisibilityChange);
+      controller?.abort();
       socket?.close();
     };
-  }, [receiveState]);
+  }, [hostedMode, receiveState]);
+
+  useEffect(() => {
+    const timer = window.setInterval(() => setFeedAge(performance.now() - lastUpdate.current), 1000);
+    return () => window.clearInterval(timer);
+  }, []);
 
   useEffect(() => {
     if (!toast) return;
@@ -101,9 +176,10 @@ function App() {
     return (Number(book.bids[0].price) + Number(book.asks[0].price)) / 2;
   }, [state]);
 
-  const staleCount = useMemo(() => Object.values(state.market.books).filter(book => !book.valid || book.age_ms > state.settings.max_book_age_ms).length, [state]);
+  const staleCount = useMemo(() => Object.values(state.market.books).filter(book => !book.valid || book.age_ms + feedAge > state.settings.max_book_age_ms).length, [state, feedAge]);
   const noCurrentMarket = state.market.mode === 'history' || Object.keys(state.market.books).length === 0;
-  const feedWarning = noCurrentMarket || staleCount > 0;
+  const missingMarket = state.market.mode === 'live' && Object.keys(state.market.books).length < 4;
+  const feedWarning = noCurrentMarket || staleCount > 0 || missingMarket || !apiOnline;
   const totalTrades = state.summary?.trade_count ?? state.trades.length;
   const realizedPnlByAsset = state.summary?.realized_pnl_by_asset ?? {};
   const pnlEntries = Object.entries(realizedPnlByAsset);
@@ -113,69 +189,81 @@ function App() {
 
   async function changeMode(mode: AppMode) {
     if (!apiOnline) {
-      setToast('請先啟動本機服務，再切換資料模式');
+      setToast('等待 Rich 後端連線');
+      return;
+    }
+    if (state.hosting) {
+      setHostedMode(mode);
       return;
     }
     try {
-      const response = await fetch(`${apiBase}/api/mode`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ mode }) });
-      if (!response.ok) throw new Error('mode change failed');
-      const next = await (await fetch(`${apiBase}/api/state`, { cache: 'no-store' })).json() as DashboardState;
-      receiveState(next);
+      await requestApi('mode', { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ mode }) });
+      await refreshState();
       setToast(`已切換至${modeLabel[mode]}資料模式`);
     } catch { setToast('資料模式切換失敗，請確認後端服務狀態'); }
   }
 
   async function simulate(item: Opportunity) {
-    if (!apiOnline) { setToast('模擬服務尚未連線，請先啟動專案'); return; }
-    const defaultSize = item.kind === 'cross' ? '0.001' : '10000';
-    const amount = size[item.id] || defaultSize;
+    if (!ledgerReady) { setToast(ledgerMessage); return; }
+    const amount = size[item.id] || item.reference_size;
     setBusyTrade(item.id);
     try {
-      const response = await fetch(`${apiBase}/api/simulations`, {
+      const result = await requestApi<{ pnl: string; end_asset: string }>('simulations', {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ strategy_id: item.id, size: amount }),
       });
-      const result = await response.json();
-      if (!response.ok) throw new Error(result.detail || '模擬成交失敗');
-      const refreshed = await (await fetch(`${apiBase}/api/state`, { cache: 'no-store' })).json() as DashboardState;
-      receiveState(refreshed);
       setToast(`模擬完成：${money(result.pnl, 4)} ${result.end_asset}`);
+      await refreshState().catch(() => setApiOnline(false));
     } catch (error) {
       setToast(error instanceof Error ? error.message : '模擬成交失敗');
     } finally { setBusyTrade(null); }
   }
 
   async function saveSettings() {
-    if (!apiOnline) { setToast('請先啟動本機服務，再儲存設定'); return; }
+    if (!ledgerReady) { setToast(ledgerMessage); return; }
     setSavingSettings(true);
     try {
-      const response = await fetch(`${apiBase}/api/settings`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(formSettings) });
-      if (!response.ok) throw new Error('設定儲存失敗');
-      const refreshed = await (await fetch(`${apiBase}/api/state`, { cache: 'no-store' })).json() as DashboardState;
-      receiveState(refreshed);
+      await requestApi('settings', { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(formSettings) });
       setSettingsOpen(false);
       setToast('監控與模擬條件已儲存');
+      await refreshState().catch(() => setApiOnline(false));
     } catch (error) { setToast(error instanceof Error ? error.message : '設定儲存失敗'); }
     finally { setSavingSettings(false); }
   }
 
   async function saveBalances() {
-    if (!apiOnline) { setToast('請先啟動本機服務，再調整虛擬資產'); return; }
+    if (!ledgerReady) { setToast(ledgerMessage); return; }
     setSavingBalances(true);
     try {
       const balances = Object.entries(balanceDraft).map(([key, amount]) => {
         const [venue, asset] = key.split(':');
         return { venue, asset, amount };
       });
-      const response = await fetch(`${apiBase}/api/balances`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ balances }) });
-      const result = await response.json();
-      if (!response.ok) throw new Error(result.detail || '虛擬資產儲存失敗');
-      const refreshed = await (await fetch(`${apiBase}/api/state`, { cache: 'no-store' })).json() as DashboardState;
-      receiveState(refreshed);
+      await requestApi('balances', { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ balances }) });
       setBalancesOpen(false);
       setToast('虛擬資產已更新；既有帳本紀錄保留');
+      await refreshState().catch(() => setApiOnline(false));
     } catch (error) { setToast(error instanceof Error ? error.message : '虛擬資產儲存失敗'); }
     finally { setSavingBalances(false); }
+  }
+
+  async function signIn() {
+    setSigningIn(true);
+    try {
+      await requestApi('session', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ key: accessKey.trim() }) });
+      await refreshState();
+      setSignInOpen(false);
+      setAccessKey('');
+    } catch (error) {
+      setToast(error instanceof Error ? error.message : '無法登入模擬帳本');
+    } finally { setSigningIn(false); }
+  }
+
+  async function signOut() {
+    try {
+      await requestApi('session', { method: 'DELETE' });
+      await refreshState();
+    } catch (error) { setToast(error instanceof Error ? error.message : '無法登出模擬帳本'); }
   }
 
   const nav = [
@@ -210,7 +298,8 @@ function App() {
         <div className="sidebar-bottom">
           <div className="safe-box"><ShieldCheck size={17} /><div><strong>僅限模擬交易</strong><span>不會送出真實訂單</span></div></div>
           <button className="nav-item" onClick={openSettings}><Settings2 size={17} /><span>設定</span></button>
-          <div className="profile-row"><div className="profile-avatar">L</div><div><strong>本機操作者</strong><span>資料保存在本機資料庫</span></div><CircleHelp size={16} className="muted-icon" /></div>
+          {ledgerStatus === 'ready' && <button className="nav-item" onClick={() => void signOut()}><KeyRound size={16} /><span>登出模擬帳本</span></button>}
+          <div className="profile-row"><div className="profile-avatar">L</div><div><strong>{state.hosting ? 'Rich 工作台' : '本機操作者'}</strong><span>{state.hosting ? 'Vercel 行情與模擬' : '資料保存在本機資料庫'}</span></div><CircleHelp size={16} className="muted-icon" /></div>
         </div>
       </aside>
 
@@ -228,7 +317,7 @@ function App() {
                 <option value="demo">示範資料</option><option value="live">即時行情</option><option value="history">歷史帳本</option>
               </select><ChevronDown size={13} className="select-caret" />
             </div>
-            <div className={`api-status ${apiOnline ? 'online' : 'offline'}`}><span />{apiOnline ? '後端已連線' : '前端示範畫面'}</div>
+            <div className={`api-status ${apiOnline ? 'online' : 'offline'}`}><span />{apiOnline ? '後端已連線' : state.market.mode === 'demo' ? '前端示範畫面' : '後端暫未連線'}</div>
             <button className="icon-button bell-button" aria-label="通知"><Bell size={17} /><i /></button>
             <button className="icon-button settings-shortcut" aria-label="設定" onClick={openSettings}><SlidersHorizontal size={17} /></button>
           </div>
@@ -243,39 +332,45 @@ function App() {
             </div>
             <div className="heading-actions">
               <div className="last-updated"><span className="status-pulse" />更新於 {new Date(state.market.generated_at).toLocaleTimeString('zh-TW', { hour: '2-digit', minute: '2-digit', second: '2-digit' })}</div>
-              <button className="button button-quiet" onClick={() => window.location.reload()}><RefreshCw size={15} />重新整理</button>
+              <button className="button button-quiet" onClick={() => void refreshState().catch(() => setApiOnline(false))}><RefreshCw size={15} />重新整理</button>
             </div>
           </section>
 
           <section className="feed-strip">
-            <div className="feed-strip-title"><span className="feed-icon"><Activity size={15} /></span><div><strong>行情來源</strong><span>{state.market.mode === 'live' ? '公開 WebSocket' : state.market.mode === 'demo' ? '本機示範行情' : '已保存帳本資料'}</span></div></div>
+            <div className="feed-strip-title"><span className="feed-icon"><Activity size={15} /></span><div><strong>行情來源</strong><span>{state.market.mode === 'live' ? state.hosting ? '公開委託簿快照' : '公開 WebSocket' : state.market.mode === 'demo' ? '示範行情' : '已保存帳本資料'}</span></div></div>
             <div className="feed-separator" />
             {(['bitopro', 'okx'] as Venue[]).map(venue => {
               const status = state.market.connections[venue];
-              const latestBook = state.market.books[venue === 'bitopro' ? 'bitopro:BTC_TWD' : 'okx:BTC-USDT'];
-              const restReady = latestBook?.source === 'rest' && latestBook.age_ms <= state.settings.max_book_age_ms;
-              const statusLabel = state.market.mode === 'history' ? '歷史模式' : state.market.mode === 'demo' ? '示範來源就緒' : status?.connected ? 'WebSocket 已連線' : restReady ? 'REST 快照可用' : '等待行情';
-              const lastSeen = status?.last_message_ts ?? (restReady ? latestBook?.received_ts : null);
-              return <div className="feed-source" key={venue}><span className={`source-dot ${status?.connected || restReady ? 'connected' : ''}`} /><div><strong>{venueLabel(venue)}</strong><span>{statusLabel}</span></div><span className="source-time">{lastSeen ? new Date(lastSeen).toLocaleTimeString('zh-TW', { hour: '2-digit', minute: '2-digit', second: '2-digit' }) : '—'}</span></div>;
+              const restBooks = Object.values(state.market.books).filter(book => book.venue === venue && book.source === 'rest');
+              const restReady = apiOnline && restBooks.some(book => book.valid && book.age_ms + feedAge <= state.settings.max_book_age_ms);
+              const statusLabel = state.market.mode === 'history' ? '歷史模式' : state.market.mode === 'demo' ? '示範來源就緒'
+                : status?.connected && apiOnline ? 'WebSocket 已連線' : restReady ? 'REST 快照可用' : '等待有效行情';
+              const lastSeen = status?.last_message_ts ?? (restBooks.length ? Math.max(...restBooks.map(book => book.received_ts)) : null);
+              return <div className="feed-source" key={venue}><span className={`source-dot ${apiOnline && (status?.connected || restReady) ? 'connected' : ''}`} /><div><strong>{venueLabel(venue)}</strong><span>{statusLabel}</span></div><span className="source-time">{lastSeen ? new Date(lastSeen).toLocaleTimeString('zh-TW', { hour: '2-digit', minute: '2-digit', second: '2-digit' }) : '—'}</span></div>;
             })}
             <div className={`feed-health ${feedWarning ? 'warning' : ''}`}><span className="health-mark">{feedWarning ? '!' : <Check size={12} />}</span><div><strong>{state.market.mode === 'history' ? '歷史帳本模式' : noCurrentMarket ? '等待有效行情' : staleCount > 0 ? `${staleCount} 本行情過期` : '行情狀態正常'}</strong><span>{state.market.mode === 'live' ? '過期或不同步時暫停模擬' : state.market.mode === 'history' ? '不接受新增模擬成交' : '示範價格不可成交'}</span></div></div>
           </section>
 
           {state.market.mode === 'demo' && <div className="demo-warning"><span>DEMO</span><p>示範價格僅供介面與計算流程預覽，不能代表交易所即時報價或可成交價格。</p><button onClick={() => void changeMode('live')}>切換至即時行情 <ArrowDownUp size={13} /></button></div>}
           {state.market.mode === 'history' && <div className="history-notice"><Clock3 size={15} /><span>歷史模式只顯示本系統已保存的帳本與訊號紀錄；目前不提供歷史委託簿回放。</span></div>}
+          {state.hosting && state.market.mode === 'live' && <div className="history-notice"><Clock3 size={15} /><span>約每 {state.hosting.poll_interval_ms / 1000} 秒取得公開快照。關閉或切離分頁後暫停更新與自動模擬。</span></div>}
+          {state.hosting && !ledgerReady && <div className="history-notice"><KeyRound size={15} /><span>{ledgerMessage}</span>{ledgerStatus === 'locked' && <button className="text-button" onClick={() => setSignInOpen(true)}>登入模擬帳本</button>}</div>}
 
           <section className="metric-grid">
             <div className="metric-card"><div className="metric-head"><span>BTC / USDT 中間價</span><span className="metric-icon blue"><Gauge size={15} /></span></div><div className="metric-value">{latestPrice ? `$${money(latestPrice, 2)}` : '—'} <small>USDT</small></div><div className="metric-foot"><span className="metric-dot blue-dot" />{state.market.mode === 'live' ? 'OKX 公開委託簿' : '示範行情'}</div><div className="sparkline spark-blue"><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /></div></div>
             <div className="metric-card"><div className="metric-head"><span>可執行套利路徑</span><span className="metric-icon green"><ArrowLeftRight size={15} /></span></div><div className="metric-value">{state.opportunities.filter(item => item.ready && Number(item.net_pct) > 0).length}<small> / {state.opportunities.length} 條</small></div><div className="metric-foot"><span className="metric-dot green-dot" />扣除設定費率後為正</div><div className="sparkline spark-green"><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /></div></div>
             <div className="metric-card"><div className="metric-head"><span>模擬已實現損益</span><span className="metric-icon violet"><WalletCards size={15} /></span></div><div className={`metric-value ${pnlClass(realizedPnl)}`}>{primaryPnlEntry ? `${realizedPnl >= 0 ? '+' : ''}${money(realizedPnl, 4)}` : '—'} <small>{primaryPnlEntry?.[0] ?? '分幣別'}</small></div><div className="metric-foot"><span className="metric-dot violet-dot" />{totalTrades ? `${totalTrades} 筆${otherPnlAssets ? ` · ${otherPnlAssets}` : '模擬成交'}` : '尚無模擬成交'}</div><div className="sparkline spark-violet"><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /></div></div>
-            <div className="metric-card"><div className="metric-head"><span>行情新鮮度</span><span className={`metric-icon ${feedWarning ? 'amber' : 'green'}`}><Clock3 size={15} /></span></div><div className="metric-value">{state.market.mode === 'history' ? '歷史模式' : noCurrentMarket ? '等待中' : staleCount ? '需檢查' : '正常'}<small>{state.market.mode === 'history' ? '' : staleCount ? ` · ${staleCount} 本過期` : ` · ≤ ${state.settings.max_book_age_ms} ms`}</small></div><div className="metric-foot"><span className={`metric-dot ${feedWarning ? 'amber-dot' : 'green-dot'}`} />{state.market.mode === 'history' ? '不接受新增成交' : '行情失效時停用模擬'}</div><div className="sparkline spark-amber"><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /></div></div>
+            <div className="metric-card"><div className="metric-head"><span>行情新鮮度</span><span className={`metric-icon ${feedWarning ? 'amber' : 'green'}`}><Clock3 size={15} /></span></div><div className="metric-value">{state.market.mode === 'history' ? '歷史模式' : noCurrentMarket ? '等待中' : feedWarning ? '需檢查' : '正常'}<small>{state.market.mode === 'history' ? '' : staleCount ? ` · ${staleCount} 本過期` : ` · ≤ ${state.settings.max_book_age_ms} ms`}</small></div><div className="metric-foot"><span className={`metric-dot ${feedWarning ? 'amber-dot' : 'green-dot'}`} />{state.market.mode === 'history' ? '不接受新增成交' : '行情失效時停用模擬'}</div><div className="sparkline spark-amber"><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /></div></div>
           </section>
 
           {(view === 'overview' || view === 'signals') && <section className="content-grid">
             <div className="panel opportunity-panel">
               <div className="panel-heading"><div><span className="panel-kicker">OPPORTUNITIES</span><h2>套利路徑</h2></div><div className="panel-tools"><span className="fee-note">已計入費率估算</span><button className="text-button" onClick={openSettings}>費率設定 <ChevronDown size={13} /></button></div></div>
               <div className="table-head opportunity-head"><span>策略 / 路徑</span><span>價差</span><span>淨利率</span><span>狀態</span><span></span></div>
-              <div className="opportunity-list">{state.opportunities.map((item, index) => <OpportunityRow key={item.id} item={item} index={index} onSimulate={() => void simulate(item)} busy={busyTrade === item.id} apiOnline={apiOnline} amount={size[item.id] ?? (item.kind === 'cross' ? '0.001' : '10000')} onAmountChange={value => setSize(current => ({ ...current, [item.id]: value }))} mode={state.market.mode} />)}</div>
+              <div className="opportunity-list">{state.opportunities.map((item, index) => <OpportunityRow key={item.id} item={item} index={index} onSimulate={() => void simulate(item)} busy={busyTrade === item.id} apiOnline={ledgerReady && item.books.every(key => {
+                const book = state.market.books[key];
+                return book?.valid && book.age_ms + feedAge <= state.settings.max_book_age_ms;
+              })} amount={size[item.id] ?? item.reference_size} onAmountChange={value => setSize(current => ({ ...current, [item.id]: value }))} mode={state.market.mode} />)}</div>
               <div className="panel-footnote"><ShieldCheck size={14} /><span>模擬按委託簿深度逐檔估算；深度不足、報價過期或路徑不同步時會拒絕整筆。</span></div>
             </div>
 
@@ -306,8 +401,17 @@ function App() {
         </div>
       </main>
 
-      {settingsOpen && <SettingsDrawer settings={formSettings} onChange={setFormSettings} onClose={() => setSettingsOpen(false)} onSave={() => void saveSettings()} saving={savingSettings} />}
+      {settingsOpen && <SettingsDrawer settings={formSettings} onChange={setFormSettings} onClose={() => setSettingsOpen(false)} onSave={() => void saveSettings()} saving={savingSettings} hosted={Boolean(state.hosting)} />}
       {balancesOpen && <BalanceDrawer balances={balanceDraft} onChange={setBalanceDraft} onClose={() => setBalancesOpen(false)} onSave={() => void saveBalances()} saving={savingBalances} />}
+      {signInOpen && <div className="drawer-scrim" onMouseDown={event => { if (event.target === event.currentTarget) { setSignInOpen(false); setAccessKey(''); } }}>
+        <aside className="settings-drawer" aria-label="登入 Rich 模擬帳本">
+          <div className="drawer-header"><h2>登入模擬帳本</h2><button className="icon-button" aria-label="關閉" onClick={() => { setSignInOpen(false); setAccessKey(''); }}><X size={18} /></button></div>
+          <form className="drawer-section" onSubmit={event => { event.preventDefault(); void signIn(); }}>
+            <label className="field-label">Rich 帳本存取金鑰<input type="password" autoComplete="current-password" required value={accessKey} onChange={event => setAccessKey(event.target.value)} /></label>
+            <button className="button button-primary" type="submit" disabled={signingIn || !accessKey.trim()}><KeyRound size={14} />{signingIn ? '登入中' : '登入'}</button>
+          </form>
+        </aside>
+      </div>}
       {toast && <div className="toast"><span className="toast-symbol"><Check size={14} /></span>{toast}</div>}
     </div>
   );
@@ -402,7 +506,7 @@ function BalanceDrawer({ balances, onChange, onClose, onSave, saving }: { balanc
   </div>;
 }
 
-function SettingsDrawer({ settings, onChange, onClose, onSave, saving }: { settings: TradingSettings; onChange: (settings: TradingSettings) => void; onClose: () => void; onSave: () => void; saving: boolean }) {
+function SettingsDrawer({ settings, onChange, onClose, onSave, saving, hosted }: { settings: TradingSettings; onChange: (settings: TradingSettings) => void; onClose: () => void; onSave: () => void; saving: boolean; hosted: boolean }) {
   const update = (key: keyof TradingSettings, value: string | number | boolean) => onChange({ ...settings, [key]: value });
   return <div className="drawer-scrim" onMouseDown={event => { if (event.target === event.currentTarget) onClose(); }}>
     <aside className="settings-drawer" aria-label="監控與模擬設定">
@@ -414,7 +518,7 @@ function SettingsDrawer({ settings, onChange, onClose, onSave, saving }: { setti
         <label className="field-label">觸發冷卻時間 <span>秒</span><input type="number" min="1" max="86400" value={settings.cooldown_seconds} onChange={event => update('cooldown_seconds', Number(event.target.value))} /></label>
         <label className="field-label">行情最長有效時間 <span>ms</span><input type="number" min="250" max="60000" step="250" value={settings.max_book_age_ms} onChange={event => update('max_book_age_ms', Number(event.target.value))} /></label>
       </div>
-      <div className="drawer-section auto-section"><div className="auto-setting-row"><div className="auto-setting-icon"><Activity size={16} /></div><div><strong>條件觸發自動模擬</strong><span>達到最低淨利門檻時，後端自動寫入模擬帳本</span></div><button className={`toggle ${settings.auto_simulation_enabled ? 'on' : ''}`} aria-label="切換自動模擬" aria-checked={settings.auto_simulation_enabled} role="switch" onClick={() => update('auto_simulation_enabled', !settings.auto_simulation_enabled)}><i /></button></div><div className="auto-notice"><ShieldCheck size={14} /><span>初始關閉。此功能只會變更虛擬餘額，不會呼叫交易所下單 API。</span></div></div>
+      <div className="drawer-section auto-section"><div className="auto-setting-row"><div className="auto-setting-icon"><Activity size={16} /></div><div><strong>條件觸發自動模擬</strong><span>{hosted ? '登入且即時行情分頁開啟時，達門檻就會寫入模擬帳本' : '達到最低淨利門檻時，後端自動寫入模擬帳本'}</span></div><button className={`toggle ${settings.auto_simulation_enabled ? 'on' : ''}`} aria-label="切換自動模擬" aria-checked={settings.auto_simulation_enabled} role="switch" onClick={() => update('auto_simulation_enabled', !settings.auto_simulation_enabled)}><i /></button></div><div className="auto-notice"><ShieldCheck size={14} /><span>初始關閉。成交只會更新模擬帳本中的虛擬餘額。</span></div></div>
       <div className="settings-assumptions"><strong>未納入費率的項目</strong><span>跨所轉帳、資產再平衡與額外換匯成本會另外影響實際淨利；本版尚未估算時不把它們當成零成本保證。</span></div>
       <div className="drawer-actions"><button className="button button-quiet" onClick={onClose}>取消</button><button className="button button-primary" onClick={onSave} disabled={saving}>{saving ? <RefreshCw size={14} className="spin" /> : <Check size={14} />}{saving ? '儲存中' : '儲存設定'}</button></div>
     </aside>

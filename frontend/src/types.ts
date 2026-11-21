@@ -12,7 +12,7 @@ export interface OrderBook {
   source?: 'websocket' | 'rest' | 'demo';
   bids: Level[];
   asks: Level[];
-  exchange_ts: number;
+  exchange_ts: number | null;
   received_ts: number;
   sequence?: number | null;
   valid: boolean;
@@ -81,6 +81,11 @@ export interface TradingSettings {
 }
 
 export interface DashboardState {
+  hosting?: {
+    market_transport: 'rest';
+    poll_interval_ms: number;
+    ledger_status: 'setup' | 'locked' | 'ready' | 'unavailable';
+  };
   market: {
     mode: AppMode;
     generated_at: string;
