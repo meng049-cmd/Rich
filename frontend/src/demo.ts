@@ -1,7 +1,7 @@
-import type { DashboardState, Level } from './types';
+import type { DashboardState, Level, OrderBook } from './types';
 
 const now = Date.now();
-const book = (venue: 'bitopro' | 'okx', pair: string, mid: number, step: number, size: number) => {
+const book = (venue: 'bitopro' | 'okx', pair: string, mid: number, step: number, size: number): OrderBook => {
   const levels = (side: 'bid' | 'ask'): Level[] => Array.from({ length: 12 }, (_, i) => ({
     price: (side === 'bid' ? mid - step * (i + 1) : mid + step * (i + 1)).toFixed(pair.includes('TWD') ? 0 : 2),
     amount: (size + i * size * 0.16).toFixed(4),
